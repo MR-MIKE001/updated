@@ -1,0 +1,70 @@
+.contact{
+    padding: 0 3rem;
+    display: flex;
+    height: 88vh;
+    margin-top: 4rem;
+}
+.c-right{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+
+}
+
+.c-right>form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.c-right .user{
+    width: 20rem;
+    height: 2rem;
+    padding: 0.3em;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    font-size: 16px;
+}
+textarea{
+    height: 4rem!important;
+
+}
+.c-blur1
+{
+    top: 1rem;
+    left:8rem;
+    
+
+}
+.ebutton{
+    padding: 10px 18px;
+}
+@media screen and (max-width:400px){
+.contact{
+    margin-top: -20rem;
+ flex-direction: column;
+ width: 300px;
+ margin-left: -1rem;
+ justify-content: center;
+ 
+margin-bottom: 8rem;
+}
+.awesome>*{
+    margin-top: 2rem;
+}
+form{
+    margin-top: 3rem;
+}
+.c-right .user{
+    width: 15rem;
+    margin-left: -2rem;
+    
+}
+.c-right button{
+    margin-left: -2rem;
+}
+}

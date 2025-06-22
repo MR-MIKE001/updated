@@ -1,0 +1,48 @@
+.footer{
+    display: flex;
+    align-items: center;
+    margin: -0.5rem -3.5rem;
+    position: relative;
+    margin-top: -7rem;
+
+}
+.f-content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    gap: 4rem;
+    color:white;
+
+}
+.f-content>a{
+    color: white;
+    margin-top: 1rem;
+}
+div>a>*{
+    border-radius: 10px;
+}
+
+.num{
+    color: white;
+    font-size: large;
+margin-top: 1rem;
+}
+
+.f-icons{
+    margin-top: -2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+@media screen and (max-width:400px){
+    .f-content{
+        margin-top: 6rem;
+    } 
+    .f-icons{
+        top:-2rem;
+    }  
+}
