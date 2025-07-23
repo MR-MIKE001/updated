@@ -45,7 +45,7 @@ textarea{
 }
 @media screen and (max-width:400px){
 .contact{
-    margin-top: -20rem;
+   margin-top: -5px;
  flex-direction: column;
  width: 300px;
  margin-left: -1rem;

@@ -23,7 +23,7 @@ function Intro() {
     <div className='i-left'>
     <div className='i-name'>
    <span style={{color:darkMode? "white":"",
-   }}> hi i Am</span>
+   }}> HI I AM</span>
    <span> MICHEAL IBRAHIM</span>
    <span> I am a passionate Full Stack Web Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js). I have a strong foundation in building responsive, user-centric web applications and API integrations. With experience in both front-end and back-end development, I deliver efficient, scalable, and maintainable solutions. My expertise includes designing intuitive interfaces, implementing robust server-side logic, and deploying full-stack applications to production. I'm dedicated to continuous learning and thrive on turning ideas into functional, high-quality digital experiences.
 </span>

@@ -1,9 +1,10 @@
-import React from "react";
+
 import "./portfolio.css";
 import sidebar from "../../img/sidebar.png";
-import ecom from "../../img/ecommerce.png";
+
 import hoc from "../../img/hoc.png";
 import music from "../../img/musicapp.png";
+import chat from '../../img/chatlogo.PNG'
 import airbnb from "../../img/airbnb.png";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,14 +13,24 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+
 function Portfolio() {
-  const image = [airbnb, ecom, sidebar, music, hoc];
+
+
+  
+  const image = [
+    {name :chat,url:"https://chatapp-54bu.onrender.com/"},
+    {name:airbnb,url:'https://airbnb-clone-fzfi.onrender.com'},
+    {name:sidebar,
+   url:""}, {name:music,
+   url:""}, {name:hoc,
+   url:""}];
   return (
     <div className='portfolio'>
       <div className='mike'>recent projects</div>
       <div className='mike2'>portfolio</div>
       <div>
-        <a href='https://airbnb-clone-fzfi.onrender.com'>
+      
           <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -32,19 +43,19 @@ function Portfolio() {
             {image.map((img) => {
               return (
                 <SwiperSlide>
+                <a href={img.url} target="blank">
                   <img
                     className='icon'
                     key={img}
-                    src={img}
+                    src={img.name}
                     alt='work done'
-                    width={400}
-                    height={200}
-                  />
+                   
+                  /></a>
                 </SwiperSlide>
               );
             })}
           </Swiper>
-        </a>
+        
       </div>
     </div>
   );

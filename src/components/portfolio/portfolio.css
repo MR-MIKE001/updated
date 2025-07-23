@@ -8,6 +8,10 @@
     align-items: center;
 
 }
+.icon{
+    width: 400px;
+    height: 200px;
+}
 .mike2{
     color: var(--orange);
     font-size: 2.5rem;
@@ -28,7 +32,12 @@
 
 @media screen and (max-width:400px){
     .portfolio{
-        display: none;
+       
         margin-top: -20rem;
     }   
+    .icon{
+        margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
 }
