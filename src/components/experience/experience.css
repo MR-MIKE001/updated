@@ -20,7 +20,7 @@
 .circle{
     width: 4rem;
     height: 4rem;
-    background: white;
+    background:  #c7bebeff;
     color: var(--orange);
     border-radius: 100%;
     position: relative;
@@ -56,14 +56,12 @@
 @media screen and (max-width:400px){
    .achievement{
   
-    margin-top: -32rem;
-    width: 30px;
+   
+    width: 28px;
    }    
   .experience{
-    margin-top: -5rem;
-    width: 290px;
-    margin-left: 1.4rem;
-    margin-right: 3rem;
+    margin-top: 34rem;
+  
   }
   .achievement span:nth-of-type(1){
     margin-top: -1rem;

@@ -49,13 +49,13 @@ textarea{
 }
 @media screen and (max-width:400px){
 .contact{
-   margin-top: -5px;
+   margin-top: 2rem;
  flex-direction: column;
  width: 300px;
  margin-left: -1rem;
  justify-content: center;
- 
-margin-bottom: 8rem;
+ height: 30rem;
+margin-bottom: 1rem;
 }
 .awesome>*{
     margin-top: 2rem;

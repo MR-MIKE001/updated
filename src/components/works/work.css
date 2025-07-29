@@ -100,18 +100,20 @@ background: white;
 
 @media screen and (max-width:400px){
     .work{
-        width: 300px;   
-        margin-top: -24rem;
+        width: 280px;   
+        margin-top: -30rem;
         flex-direction: column;
         height: 55vh;
-        padding: 0;
+         padding: 0 1.5rem;
+         
         gap: 5rem;
-        margin-bottom: 55rem;
+       
            
     }
     
  .m-right{
-   margin-left: 1.9rem;
+    margin-top: -2rem;
+   margin-left: 0.6rem;
     transform: scale(0.7);
  }   
  .m-mainsecircle{
