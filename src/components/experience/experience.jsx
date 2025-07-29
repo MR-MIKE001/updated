@@ -1,9 +1,13 @@
 import React from 'react'
 import './experience.css'
+import { themeContext } from "../../contest";
+import { useContext } from "react";
 
 function Experience() {
+const darkMode  = useContext(themeContext).state.darkMode;
+
   return (
-    <div className='experience'>
+    <div style={{background:darkMode?" #2f2f2f":" #c7bebeff"}}   className='experience'>
         <div className='achievement'>
          <div className='circle'>8+</div>
         <span>years</span>

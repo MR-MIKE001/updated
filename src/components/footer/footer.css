@@ -4,6 +4,7 @@
     margin: -0.5rem -3.5rem;
     position: relative;
     margin-top: -7rem;
+   
 
 }
 .f-content{
@@ -15,11 +16,11 @@
     width: 100%;
     margin-top: 4rem;
     gap: 4rem;
-    color:white;
+    color:#2f2f2f;
 
 }
 .f-content>a{
-    color: white;
+   color:#2f2f2f;
     margin-top: 1rem;
 }
 div>a>*{
@@ -27,7 +28,7 @@ div>a>*{
 }
 
 .num{
-    color: white;
+   color:#2f2f2f;
     font-size: large;
 margin-top: 1rem;
 }

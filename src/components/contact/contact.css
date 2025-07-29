@@ -1,9 +1,13 @@
 .contact{
+    margin-top: -2rem;
     padding: 0 3rem;
     display: flex;
     height: 88vh;
     margin-top: 4rem;
+    padding-top: 2rem;
+    margin-bottom: -12rem;
 }
+
 .c-right{
     display: flex;
     justify-content: center;

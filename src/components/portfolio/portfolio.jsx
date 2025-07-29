@@ -12,10 +12,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { themeContext } from "../../contest";
+import { useContext } from "react";
 
 
 function Portfolio() {
-
+const darkMode = useContext(themeContext).state.darkMode;
 
   
   const image = [
@@ -27,8 +29,8 @@ function Portfolio() {
    url:""}];
   return (
     <div className='portfolio'>
-      <div className='mike'>recent projects</div>
-      <div className='mike2'>portfolio</div>
+      <div className='mike' style={{ color: darkMode ? "white" : "" }}>PORTFOLIO</div>
+      <div className='mike2'>RECENT PROJECTS</div>
       <div>
       
           <Swiper

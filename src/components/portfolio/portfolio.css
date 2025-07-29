@@ -1,6 +1,7 @@
 
 .mike{
     color: var(--black);
+    margin-top: -6rem;
     font-size: 2rem;
     font-weight: bold;
     display: flex;
@@ -14,7 +15,7 @@
 }
 .mike2{
     color: var(--orange);
-    font-size: 2.5rem;
+    font-size: 1rem;
     font-weight: bold;
     display: flex;
     justify-content: center;

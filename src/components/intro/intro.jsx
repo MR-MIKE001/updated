@@ -30,7 +30,7 @@ function Intro() {
 
 </div>
 <Link spy={true} to='contact' smooth={true}>
-<button className='button i-button'>hire me</button></Link>
+<button className='button i-button'>Hire Me</button></Link>
 
 {/* <div className='i-icons'>
     <img src={Github} alt="mike's github"/>

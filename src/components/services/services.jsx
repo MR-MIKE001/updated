@@ -13,10 +13,10 @@ function Services() {
   const darkMode = theme.state.darkMode;
   const transition = { duration: 5, type: "string" };
   return (
-    <div className='services' id='services'>
+    <div style={{background:darkMode?" #2f2f2f":" #c7bebeff"}}  className='services' id='services'>
       <div className='awesome'>
-        <span style={{ color: darkMode ? "white" : "" }}>my awesome</span>
-        <span>services</span>
+        <span style={{ color: darkMode ? "white" : "" }}>MY AWESOME</span>
+        <span>SERVICES</span>
         <span>
           I provide end-to-end web solutions, including front-end and back-end
           development,
@@ -28,7 +28,7 @@ function Services() {
           <br />
         </span>
         <a href={resume} download>
-          <button className='button s-button'>download cv</button>
+          <button className='button s-button'>Download CV</button>
         </a>
 
         <div className='blur s-blur' style={{ background: "#abf1ff94" }}></div>

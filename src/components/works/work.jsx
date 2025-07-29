@@ -7,14 +7,17 @@ import amazon from '../../img/amazon.png'
 import facebook from '../../img/Facebook.png'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
-function Work() {
+import { themeContext } from "../../contest";
+import { useContext } from "react";
 
+function Work() {
+const darkMode = useContext(themeContext).state.darkMode;
   const transition={duration:2, type:"string"}
   return (
-    <div className='work'>
-      <div className='awesome'>
-        <span>work for all these</span>
-        <span>brands and clients</span>
+    <div  className='work'>
+      <div id='m-left' className='awesome'>
+        <span style={{ color: darkMode ? "white" : "" }}>WORKED FOR ALL BRANDS</span>
+        <span>BRANDS AND CLIENTS</span>
         <span className='space'>I’ve had the privilege of collaborating with some 
 
         incredible clients<br/> across platforms like LinkedIn, Upwork, and Fiverr. From web development<br/>
@@ -26,7 +29,7 @@ function Work() {
 Looking to bring your next project to life? Let’s connect<br/>
  I’d love to help you achieve your goals! </span>
 <Link spy={true} to='contact' smooth={true}>
-        <button className='button s-button'>hire me
+        <button className='button s-button'>Hire Me
         </button></Link>
         
         

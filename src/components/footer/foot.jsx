@@ -12,13 +12,13 @@ function Foot() {
         <div>
           <div className='f-icons'>
             <a href='https://wa.me/+2348109433307'>
-              <UilWhatsapp color='white' size='3rem' />
+              <UilWhatsapp color='#2f2f2f' size='3rem' />
             </a>
             <a href='https://www.facebook.com/profile.php?id=61566887810491'>
-              <UilFacebook color='white' size='3rem' />
+              <UilFacebook color='#2f2f2f' size='3rem' />
             </a>
             <a href='mailto:aimrmike3@gmail.com'>
-              <UilMailbox color='white' size='3rem' />
+              <UilMailbox color='#2f2f2f' size='3rem' />
             </a>
           </div>
 
