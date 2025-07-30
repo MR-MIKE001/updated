@@ -1,9 +1,9 @@
-import React from "react";
+
 import "./services.css";
 import glasses from "../../img/glasses.png";
 import humble from "../../img/humble.png";
 import Card from "../cards/card";
-import resume from "./resume.pdf";
+import resume from "./Mr mike Resume-1.pdf";
 import { themeContext } from "../../contest";
 import { useContext } from "react";
 import { motion } from "framer-motion";
