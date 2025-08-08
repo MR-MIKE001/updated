@@ -8,6 +8,7 @@
 
 }
 
+
 .i-left{
     display: flex;
     position: relative;
@@ -106,6 +107,15 @@
     z-index: -9;
     top: -18%;
     left: 56%;
+}
+.boy{
+    border-radius: 50%;
+}
+.boy-wrapper{
+    border-radius:50% ;
+    top: 2rem;
+
+    border: 6px solid var(--orange);
 }
 
 @media screen and (max-width:400px){

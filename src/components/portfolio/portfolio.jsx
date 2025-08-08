@@ -1,11 +1,12 @@
 
 import "./portfolio.css";
-import sidebar from "../../img/sidebar.png";
+
 
 import hoc from "../../img/hoc.png";
 import music from "../../img/musicapp.png";
 import chat from '../../img/chatlogo.PNG'
 import airbnb from "../../img/airbnb.png";
+import nike from '../../img/Nikebg.PNG'
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -23,8 +24,8 @@ const darkMode = useContext(themeContext).state.darkMode;
   const image = [
     {name :chat,url:"https://chatapp-54bu.onrender.com/"},
     {name:airbnb,url:'https://airbnb-clone-fzfi.onrender.com'},
-    {name:sidebar,
-   url:""}, {name:music,
+    {name:nike,
+   url:"https://nike-mr-mike-2i2j.onrender.com/"}, {name:music,
    url:""}, {name:hoc,
    url:""}];
   return (

@@ -2,7 +2,7 @@ import React from 'react'
 import "./intro.css"
 import vector1 from "../../img/Vector1.png"
 import vector2 from "../../img/Vector2.png"
-import boy from "../../img/boy.png"
+import boy from "../../img/avatar (2).jpg"
 import thumbup from "../../img/thumbup.png"
 import crown from "../../img/crown.png"
 import glasses from "../../img/glassesimoji.png"
@@ -42,7 +42,11 @@ function Intro() {
     <div className='i-right'>
     <img src={vector1} alt=''/>
     <img src={vector2} alt=''/>
-    <img src={boy} alt=''/>
+    <div className='boy-wrapper'>
+      <img src={boy} alt=''
+      width={350} className='boy' />
+    </div>
+   
     <motion.img 
     initial={{left:"-36%"}}
     whileInView={{left:"-25%"}}
