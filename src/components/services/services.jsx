@@ -41,7 +41,7 @@ function Services() {
           transition={transition}>
           <Card
             emoji={glasses}
-            heading='web development'
+            heading='WEB DEVELOPMENT'
             details='HTML,CSS,Javascript,Nodejs,Mongodb'
           />
         </motion.div>
@@ -52,8 +52,8 @@ function Services() {
           transition={transition}>
           <Card
             emoji={humble}
-            heading='MIBILE APP'
-            details='REACT-NATIVE, JAVA'
+            heading='MOBILE APP'
+            details='React-native, Java'
           />
         </motion.div>
         <motion.div
