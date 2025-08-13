@@ -53,12 +53,13 @@ function Intro() {
     transition={transition}
     src={glasses} alt=''/>
    <motion.div 
-   initial={{top:"-4%", left:"74%"}}
-   whileInView={{left:"68%"}}
+   initial={{top:"-4%", left:"84%"}}
+   whileInView={{left:"80%"}}
    transition={transition}
    style={{top:'-4%', left:'68%'}}
    className='.floating-div'>
-   <FloatingDiv txt1="web" txt2="developer" image={crown}/>
+   <FloatingDiv txt1="web" txt2="developer"
+    image={crown}/>
    </motion.div>
    <motion.div
    initial={{left:"9rem", top:"18rem"}}
