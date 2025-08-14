@@ -18,7 +18,7 @@ function Foot() {
             <a href='https://wa.me/+2348109433307'>
               <UilWhatsapp color='#2f2f2f' size='3rem' />
             </a>
-            <a href='linkedin.com/in/micheal-ibrahim-57539937a'>
+            <a href='https://www.linkedin.com/in/micheal-ibrahim-57539937a'>
               <UilLinkedin color='#2f2f2f' size='3rem' />
             </a>
           
