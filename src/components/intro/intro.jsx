@@ -56,6 +56,7 @@ function Intro() {
    initial={{top:"-4%", left:"84%"}}
    whileInView={{left:"80%"}}
    transition={transition}
+
    style={{top:'-4%', left:'68%'}}
    className='.floating-div'>
    <FloatingDiv txt1="web" txt2="developer"
