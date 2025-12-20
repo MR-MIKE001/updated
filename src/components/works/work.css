@@ -97,7 +97,36 @@ background: white;
    top: 8rem;
 }
 
-
+@media screen and (max-width:414px){
+    .work{
+        width: 280px;   
+        margin-top: -30rem;
+        flex-direction: column;
+        height: 55vh;
+         padding: 0 1.5rem;
+         
+        gap: 5rem;
+       
+           
+    }
+    
+ .m-right{
+    margin-top: -2rem;
+   margin-left: 0.6rem;
+    transform: scale(0.7);
+ }   
+ .m-mainsecircle{
+    margin-left: -1rem;
+ }
+ .m-maincircle{
+    position: static;
+    margin-left: -12rem;
+ }
+ 
+ .m-backcircle{
+    left: -4rem;
+ }
+}
 @media screen and (max-width:400px){
     .work{
         width: 280px;   

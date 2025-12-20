@@ -8,11 +8,11 @@ function Foot() {
     <div className='footer'>
       <img src={wave} alt='' style={{ width: "100%", height: "300px" }} />
       <div className='f-content'>
-        <a href='mailto:aimrmike3@gmail.com'>aimrmike3@gmail.com</a>
+        <a href='mailto:aimrmike5@gmail.com'>aimrmike5@gmail.com</a>
         <div>
           <div className='f-icons'>
             
-            <a href='https://www.facebook.com/profile.php?id=61566887810491' target="blank">
+            <a href='https://web.facebook.com/?_rdc=1&_rdr#' target="blank">
               <UilFacebook color='#2f2f2f' size='3rem' />
             </a>
             <a href='https://wa.me/+2348109433307' target="blank">
@@ -28,7 +28,7 @@ function Foot() {
             className='num'
             href='tel:+2348109433307'
             style={{ marginLeft: "2.5rem" }}>
-            +2347086131540
+            +2348109433307
           </a>
         </div>
       </div>

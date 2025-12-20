@@ -25,9 +25,8 @@ function Intro() {
    <span style={{color:darkMode? "white":"",
    }}> HI I AM</span>
    <span> MICHEAL IBRAHIM</span>
-   <span> I am a passionate Full Stack Web Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js). I have a strong foundation in building responsive, user-centric web applications and API integrations. With experience in both front-end and back-end development, I deliver efficient, scalable, and maintainable solutions. My expertise includes designing intuitive interfaces, implementing robust server-side logic, and deploying full-stack applications to production. I'm dedicated to continuous learning and thrive on turning ideas into functional, high-quality digital experiences.
-</span>
-
+   <span> I am a passionate Full-Stack Software Engineer with strong expertise in the MERN stack (MongoDB, Express.js, React.js, Node.js), complemented by professional experience in C#, .NET, ASP.NET MVC, and SQL. I specialize in building responsive, user-centric web and mobile applications, as well as designing and integrating robust RESTful APIs. With hands-on experience across both frontend and backend development, I deliver efficient, scalable, and maintainable solutions. My skill set spans intuitive UI design, solid server-side architecture, optimized database interactions, and production-ready deployments. I am committed to continuous learning and enjoy transforming ideas into reliable, high-quality digital products.
+   </span>
 </div>
 <Link spy={true} to='contact' smooth={true}>
 <button className='button i-button'>Hire Me</button></Link>

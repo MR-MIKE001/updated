@@ -117,8 +117,11 @@
 
     border: 6px solid var(--orange);
 }
+@media screen and (max-width:420px){
 
-@media screen and (max-width:400px){
+}
+
+@media screen and (max-width:420px){
     .intro{
         flex-direction: column;
         height: 50rem;

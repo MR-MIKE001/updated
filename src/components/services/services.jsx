@@ -3,7 +3,7 @@ import "./services.css";
 import glasses from "../../img/glasses.png";
 import humble from "../../img/humble.png";
 import Card from "../cards/card";
-import resume from "./MResume.pdf";
+import resume from "./Michael-A-Ibrahim.pdf";
 import { themeContext } from "../../contest";
 import { useContext } from "react";
 import { motion } from "framer-motion";
