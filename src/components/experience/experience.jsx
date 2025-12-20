@@ -9,7 +9,7 @@ const darkMode  = useContext(themeContext).state.darkMode;
   return (
     <div style={{background:darkMode?" #2f2f2f":" #c7bebeff"}}   className='experience'>
         <div className='achievement'>
-         <div className='circle'>8+</div>
+         <div className='circle'>6+</div>
         <span>years</span>
         <span>experience</span></div>
         <div className='achievement'>
