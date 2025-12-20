@@ -54,6 +54,7 @@ textarea{
 @media screen and (max-width:414px){
 .contact{
    margin-top: 2rem;
+   
  flex-direction: column;
  width: 350px;
  margin-left: -1rem;
@@ -63,6 +64,12 @@ margin-bottom: 1rem;
 }
 .awesome>*{
     margin-top: 2rem;
+}
+.c-right{
+     margin-left: -0;
+}
+.c-left{
+    padding-left: 0rem;
 }
 form{
     margin-top: 3rem;
