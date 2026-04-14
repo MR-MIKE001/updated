@@ -19,7 +19,7 @@ const darkMode = useContext(themeContext).state.darkMode;
         <span style={{ color: darkMode ? "white" : "" }}>WORKED FOR ALL BRANDS</span>
         <span>BRANDS AND CLIENTS</span>
         <span className='space'>I’ve collaborated with reputable organizations such as Vega IT and Africa International Housing Show, alongside delivering solutions for global clients on Upwork and Fiverr. My work focuses on building scalable, high-performance applications with a strong emphasis on quality, reliability, and user experience.
-If you’re looking for a developer who delivers with precision and excellence, let’s create something exceptional. 🚀  </span>
+If you’re looking for a developer who delivers with precision and excellence, let’s create something exceptional.   </span>
 <Link spy={true} to='contact' smooth={true}>
         <button className='button s-button'>Hire Me
         </button></Link>
