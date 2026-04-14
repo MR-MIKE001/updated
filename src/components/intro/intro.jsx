@@ -32,7 +32,7 @@ function Intro({title,description}) {
    }}> {title==="home"?"HI I AM":""}</span>
    <span style={{color:darkMode? "white":"",
    }}> {title==="home"?"MICHEAL IBRAHIM":title==="about"?"ABOUT ME":title}</span>
-   <span style={{color:darkMode? "white":"",
+   <span style={{color:darkMode? "white":"black",
    }}> {description}</span>
 </div>
 <Link spy={true} to='contact' smooth={true}>
