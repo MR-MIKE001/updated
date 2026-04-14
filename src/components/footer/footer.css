@@ -38,7 +38,10 @@ margin-top: 1rem;
     display: flex;
     gap: 2rem;
 }
-
+.footImg{
+    width: 95%;
+    height: 300px;
+}
 @media screen and (max-width:400px){
     .f-content{
         margin-top: 6rem;

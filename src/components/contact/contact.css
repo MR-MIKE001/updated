@@ -1,110 +1,222 @@
-.contact{
-    margin-top: -2rem;
-    padding: 0 3rem;
+/* ── Base styles ── */
+.contact {
     display: flex;
-    height: 88vh;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem 3rem;
     margin-top: 4rem;
-    padding-top: 2rem;
-    margin-bottom: -12rem;
+    margin-bottom: 5rem;
+    gap: 2rem;
+    overflow: hidden;
+    padding-bottom: 3rem;
 }
 
-.c-right{
-    display: flex;
-    justify-content: center;
-    position: relative;
+.c-left {
     flex: 1;
-    margin-left: 15rem;
-
+    padding-left: 0.5rem;
 }
 
-.c-right>form{
+.contact-title {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-
+    gap: 1rem;
 }
 
-.c-right .user{
-    width: 20rem;
-    height: 2rem;
-    padding: 0.3em;
+.contact-title > :nth-child(1) {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.contact-title > :nth-child(2) {
+    color: var(--orange);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.contact-title > :nth-child(3) {
+    color: var(--gray);
+    font-size: 16px;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.c-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.c-right > form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    max-width: 24rem;
+}
+
+.c-right .user {
+    width: 100%;
+    max-width: 20rem;
+    height: 2.5rem;
+    padding: 0.3rem 0.6rem;
     outline: none;
     border: 2px solid var(--orange);
     border-radius: 8px;
     font-size: 16px;
+    box-sizing: border-box;
 }
-textarea{
-    height: 4rem!important;
 
+textarea.user {
+    height: 6rem !important;
+    resize: vertical;
 }
-.c-blur1
-{
-    top: 1rem;
-    left:8rem;
-    
 
+.ebutton {
+    background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+    box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 20rem;
 }
-.c-left{
-    padding-left: 05rem;
+
+.ebutton:hover {
+    background: white;
+    color: var(--orange);
+    border: 1px solid var(--orange);
 }
-.ebutton{
-    padding: 10px 18px;
+
+/* ── Large desktop (≥1280px) ── */
+@media (min-width: 1280px) {
+    .contact {
+        padding: 2rem 4rem;
+    }
+
+    .contact-title > :nth-child(1),
+    .contact-title > :nth-child(2) {
+        font-size: 2.4rem;
+    }
+
+    .c-right .user {
+        max-width: 22rem;
+    }
 }
-@media screen and (max-width:414px){
-.contact{
-   margin-top: 2rem;
-   
- flex-direction: column;
- width: 350px;
- margin-left: -1rem;
- justify-content: center;
- height: 30rem;
-margin-bottom: 1rem;
+
+/* ── Tablet landscape (≤1024px) ── */
+@media (max-width: 1024px) {
+    .contact {
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .contact-title > :nth-child(1),
+    .contact-title > :nth-child(2) {
+        font-size: 1.8rem;
+    }
 }
-.awesome>*{
-    margin-top: 2rem;
+
+/* ── Tablet portrait (≤768px) ── */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        padding: 1.5rem;
+        margin-top: 3rem;
+        gap: 2.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .c-left {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .contact-title > :nth-child(1),
+    .contact-title > :nth-child(2) {
+        font-size: 1.7rem;
+    }
+
+    .contact-title > :nth-child(3) {
+        font-size: 15px;
+    }
+
+    .c-right {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .c-right > form {
+        align-items: flex-start;
+        max-width: 100%;
+    }
+
+    .c-right .user,
+    .ebutton {
+        max-width: 100%;
+    }
 }
-.c-right{
-     margin-left: -0;
+
+/* ── Mobile (≤480px) ── */
+@media (max-width: 480px) {
+    .contact {
+        padding: 1rem;
+        margin-top: 2rem;
+        gap: 2rem;
+        padding-bottom: 4em;
+    }
+
+    .contact-title > :nth-child(1),
+    .contact-title > :nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    .contact-title > :nth-child(3) {
+        font-size: 14px;
+        margin-top: 0.6rem;
+    }
+
+    .c-right .user {
+        height: 2.2rem;
+        font-size: 15px;
+    }
+
+    textarea.user {
+        height: 5rem !important;
+    }
+
+    .ebutton {
+        font-size: 15px;
+        padding: 0.5rem 1.5rem;
+    }
 }
-.c-left{
-    padding-left: 0rem;
-}
-form{
-    margin-top: 3rem;
-}
-.c-right .user{
-    width: 15rem;
-    margin-left: -2rem;
-    
-}
-.c-right button{
-    margin-left: -2rem;
-}
-}
-@media screen and (max-width:400px){
-.contact{
-   margin-top: 2rem;
- flex-direction: column;
- width: 300px;
- margin-left: -1rem;
- justify-content: center;
- height: 30rem;
-margin-bottom: 1rem;
-}
-.awesome>*{
-    margin-top: 2rem;
-}
-form{
-    margin-top: 3rem;
-}
-.c-right .user{
-    width: 15rem;
-    margin-left: -2rem;
-    
-}
-.c-right button{
-    margin-left: -2rem;
-}
+
+/* ── Small mobile (≤360px) ── */
+@media (max-width: 360px) {
+    .contact {
+        padding: 0.75rem;
+        margin-top: 1.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .contact-title > :nth-child(1),
+    .contact-title > :nth-child(2) {
+        font-size: 1.3rem;
+    }
+
+    .contact-title > :nth-child(3) {
+        font-size: 13px;
+    }
+
+    .ebutton {
+        font-size: 14px;
+    }
 }

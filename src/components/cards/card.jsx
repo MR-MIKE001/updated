@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link } from 'react-scroll'
 import "./card.css"
-function card({emoji,heading,details}) {
+import { Link } from 'react-router-dom'
+function Card({emoji,heading,details}) {
   return (
     <div className='card'>
         <img src={emoji} alt=''/>
-        <span>{heading}</span>
+        <span style={{marginTop:!emoji?"-4rem":""}}>{heading}</span>
         <span>{details}</span>
-       <Link spy={true} to='contact' smooth={true}> <button className='c-button'> learn more</button></Link>
+      {emoji&& <Link to={"/services"} > <button className='c-button'> learn more</button></Link>}
     </div>
   )
 }
 
-export default card
+export default Card

@@ -1,72 +1,225 @@
-.n-wrapper{
-
+/* ── Base styles ── */
+.n-wrapper {
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    padding:0 2rem ;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
 }
 
-.n-left{
+.n-left {
     flex: 1;
     align-items: center;
     display: flex;
     gap: 2rem;
-    
 }
 
-.n-name{
+.n-name {
     font-size: 1.3rem;
     font-weight: bold;
-
+    white-space: nowrap;
 }
-.n-right{
+
+.n-right {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     font-weight: 400;
-   
-
 }
 
-.n-list{
-    flex:10;
-
+.n-list {
+    flex: 10;
 }
 
-.n-list>ul{
+.n-list > ul {
     display: flex;
     cursor: pointer;
-    gap:2rem;
-    margin-right: 4rem;
-     
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
 }
 
-.n-list>ul>*:hover{
+.n-list > ul > *:hover {
     cursor: pointer;
     color: var(--orange);
 }
 
-.n-button{
-  flex: 2;
-    
+.n-button {
+    flex: 2;
+    white-space: nowrap;
 }
 
-@media screen and (max-width:414px){
-    .n-wrapper{
-        padding: 0 1.2rem;
-    }
+/* ── Hamburger (hidden on desktop) ── */
+.n-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 100px;
+    cursor: pointer;
+    padding: 0.3rem;
+    z-index: 100;
+}
+
+.n-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.n-hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.n-hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.n-hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile drawer ── */
+.n-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background: var(--white, #fff);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+    gap: 1.2rem;
+}
+
+.n-mobile-menu.open {
+    display: flex;
+}
+
+.n-mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.n-mobile-menu ul li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.n-mobile-menu ul li:hover {
+    color: var(--orange);
+}
+
+.n-mobile-menu .n-mobile-button {
+    margin-top: 0.8rem;
+}
+
+.n-mobile-menu .n-mobile-button .button {
+    width: 100%;
+}
+.mobile-button{
+    background: var(--yellow);
+    border-radius: 30px;
+    color: white;
     
-    .n-left{
-        justify-content: space-between;
-        gap: 6rem;
-        
+    border: none;
+    font-size: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg,#fdc50f 26.71%,#fb982f 99.36%);
+    box-shadow: 0px 20px 24px 3px rgba(251,161,40,0.42);
+}
+/* ── Large desktop (≥1280px) ── */
+@media (min-width: 1280px) {
+    .n-wrapper {
+        padding: 0 3rem;
     }
-    .n-list{
-       display: none;
+    .n-name {
+        font-size: 1.5rem;
     }
-    .n-button{
+    .n-list > ul {
+        gap: 2.5rem;
+    }
+}
+
+/* ── Tablet landscape (≤1024px) ── */
+@media (max-width: 1024px) {
+    .n-wrapper {
+        padding: 0 1.5rem;
+    }
+    .n-list > ul {
+        gap: 1.3rem;
+    }
+}
+
+/* ── Tablet portrait (≤768px) ── */
+@media (max-width: 768px) {
+    .n-wrapper {
+        padding: 0 1.5rem;
+        height: 8vh;
+        min-height: 60px;
+    }
+    .n-right {
         display: none;
+    }
+    .n-hamburger {
+        display: flex;
+    }
+    .n-mobile-menu {
+        top: 8vh;
+    }
+}
+
+/* ── Mobile (≤480px) ── */
+@media (max-width: 480px) {
+    .n-wrapper {
+        padding: 0 1rem;
+        height: 7vh;
+        min-height: 56px;
+    }
+    .n-name {
+        font-size: 1.1rem;
+    }
+    .n-mobile-menu {
+        top: 7vh;
+        padding: 1.2rem 1rem;
+    }
+    .n-mobile-menu ul li {
+        font-size: 1rem;
+    }
+    .n-left{
+        display: block;
+        gap: 1rem;
+    }
+}
+
+/* ── Small mobile (≤360px) ── */
+@media (max-width: 360px) {
+    .n-wrapper {
+        padding: 0 0.75rem;
+    }
+    .n-name {
+        font-size: 1rem;
+    }
+    .n-mobile-men{
+        left: -1.75rem;
     }
     
 }

@@ -1,0 +1,121 @@
+/* ── Base styles ── */
+.howiwork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.howiwork h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--orange);
+    text-align: center;
+    line-height: 1.3;
+}
+
+.howiwork p {
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    line-height: 1.7;
+}
+
+em {
+    font-style: italic;
+    color: var(--orange);
+}
+
+/* ── Large desktop (≥1280px) ── */
+@media (min-width: 1280px) {
+    .howiwork {
+        padding: 2.5rem 4rem;
+    }
+
+    .howiwork h2 {
+        font-size: 1.8rem;
+    }
+
+    .howiwork p {
+        font-size: 1.1rem;
+        max-width: 700px;
+    }
+}
+
+/* ── Tablet landscape (≤1024px) ── */
+@media (max-width: 1024px) {
+    .howiwork {
+        padding: 2rem 2.5rem;
+    }
+
+    .howiwork h2 {
+        font-size: 1.4rem;
+    }
+
+    .howiwork p {
+        max-width: 520px;
+    }
+}
+
+/* ── Tablet portrait (≤768px) ── */
+@media (max-width: 768px) {
+    .howiwork {
+        padding: 1.5rem 2rem;
+        margin: 1.5rem 0;
+        border-radius: 8px;
+    }
+
+    .howiwork h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .howiwork p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+}
+
+/* ── Mobile (≤480px) ── */
+@media (max-width: 480px) {
+    .howiwork {
+        padding: 1.2rem 1rem;
+        margin: 1rem 0;
+        border-radius: 6px;
+    }
+
+    .howiwork h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .howiwork p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+/* ── Small mobile (≤360px) ── */
+@media (max-width: 360px) {
+    .howiwork {
+        padding: 1rem 0.75rem;
+        margin: 0.75rem 0;
+    }
+
+    .howiwork h2 {
+        font-size: 1.1rem;
+    }
+
+    .howiwork p {
+        font-size: 0.85rem;
+    }
+}

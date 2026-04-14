@@ -1,25 +1,26 @@
 
 import "./footer.css";
 import wave from "../../img/wave.png";
-import { UilFacebook, UilWhatsapp,UilLinkedin } from "@iconscout/react-unicons";
+import { UilFacebook, UilWhatsapp, UilTwitter } from "@iconscout/react-unicons";
 
 function Foot() {
+
   return (
     <div className='footer'>
-      <img src={wave} alt='' style={{ width: "100%", height: "300px" }} />
+      <img src={wave} alt='wave' className="footImg" />
       <div className='f-content'>
         <a href='mailto:aimrmike5@gmail.com'>aimrmike5@gmail.com</a>
         <div>
           <div className='f-icons'>
             
-            <a href='https://web.facebook.com/?_rdc=1&_rdr#' target="blank">
+            <a href='https://web.facebook.com/profile.php?id=100085523963850' target="blank">
               <UilFacebook color='#2f2f2f' size='3rem' />
             </a>
             <a href='https://wa.me/+2348109433307' target="blank">
               <UilWhatsapp color='#2f2f2f' size='3rem' />
             </a>
-            <a href='https://www.linkedin.com/in/micheal-ibrahim-57539937a' target="blank">
-              <UilLinkedin color='#2f2f2f' size='3rem' />
+            <a href='https://x.com/mrmikeadavize' target="blank">
+              <UilTwitter color='#2f2f2f' size='3rem' />
             </a>
           
           </div>

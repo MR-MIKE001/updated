@@ -1,11 +1,9 @@
 
 import "./portfolio.css";
-
-
-import hoc from "../../img/hoc.png";
-import music from "../../img/musicapp.png";
+import hoc from "../../img/ahis_logo.png";
+import agentity from "../../img/agentitypage.png";
 import chat from '../../img/chatlogo.PNG'
-import airbnb from "../../img/airbnb.png";
+import airbnb from "../../img/aii.png";
 import nike from '../../img/Nikebg.PNG'
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -25,8 +23,8 @@ const darkMode = useContext(themeContext).state.darkMode;
     {name :chat,url:"https://chatapp-54bu.onrender.com/"},
     {name:airbnb,url:'https://airbnb-clone-fzfi.onrender.com'},
     {name:nike,
-   url:"https://nike-mr-mike-2i2j.onrender.com/"}, {name:music,
-   url:""}, {name:hoc,
+   url:"https://nike-mr-mike-2i2j.onrender.com/"}, {name:agentity,
+   url:"https://agentity-frontend-dev.onrender.com/"}, {name:hoc,
    url:""}];
   return (
     <div className='portfolio'>

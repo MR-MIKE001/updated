@@ -1,0 +1,209 @@
+/* ── Base styles ── */
+.skills {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 3rem;
+    margin-top: 4rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 3rem;
+}
+
+/* ── Dark mode ── */
+.skills-dark {
+    color: white;
+}
+
+.skills-dark .skills-heading span:first-child {
+    color: white;
+}
+
+/* ── Heading ── */
+.skills-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    z-index: 1;
+}
+
+.skills-heading span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black, #242D49);
+    line-height: 1.2;
+}
+
+.skills-heading span:last-child {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--orange, #FCA61F);
+    line-height: 1.2;
+}
+
+/* ── Cards grid ── */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+    z-index: 1;
+}
+
+/* ── Ambient blurs ── */
+.skills-blur {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(72px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.skills-blur--purple {
+    background: rgb(238 210 255);
+    width: 22rem;
+    height: 14rem;
+    top: 2rem;
+    right: -6rem;
+}
+
+.skills-blur--blue {
+    background: #c1f5ff;
+    width: 21rem;
+    height: 11rem;
+    top: 17rem;
+    left: -9rem;
+}
+
+/* ── Large desktop (≥1280px) ── */
+@media (min-width: 1280px) {
+    .skills {
+        padding: 5rem 4rem;
+    }
+
+    .skills-heading span:first-child,
+    .skills-heading span:last-child {
+        font-size: 2.4rem;
+    }
+
+    .skills-container {
+        gap: 2rem;
+    }
+}
+
+/* ── Tablet landscape (≤1024px) ── */
+@media (max-width: 1024px) {
+    .skills {
+        padding: 3rem 2.5rem;
+        gap: 2.5rem;
+    }
+
+    .skills-heading span:first-child,
+    .skills-heading span:last-child {
+        font-size: 1.8rem;
+    }
+
+    .skills-container {
+        gap: 1.2rem;
+        max-width: 100%;
+    }
+
+    .skills-blur--purple {
+        width: 16rem;
+        height: 10rem;
+    }
+
+    .skills-blur--blue {
+        width: 15rem;
+        height: 8rem;
+    }
+}
+
+/* ── Tablet portrait (≤768px) ── */
+@media (max-width: 768px) {
+    .skills {
+        padding: 2.5rem 1.5rem;
+        margin-top: 3rem;
+        gap: 2rem;
+    }
+
+    .skills-heading span:first-child,
+    .skills-heading span:last-child {
+        font-size: 1.6rem;
+    }
+
+    .skills-container {
+        gap: 1rem;
+    }
+
+    .skills-blur--purple {
+        width: 12rem;
+        height: 8rem;
+        right: -3rem;
+    }
+
+    .skills-blur--blue {
+        width: 12rem;
+        height: 7rem;
+        left: -4rem;
+    }
+}
+
+/* ── Mobile (≤480px) ── */
+@media (max-width: 480px) {
+    .skills {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+        gap: 1.5rem;
+    }
+
+    .skills-heading span:first-child,
+    .skills-heading span:last-child {
+        font-size: 1.4rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.9rem;
+    }
+
+    .skills-blur--purple {
+        width: 10rem;
+        height: 6rem;
+        top: 1rem;
+        right: -2rem;
+    }
+
+    .skills-blur--blue {
+        width: 10rem;
+        height: 6rem;
+        top: 10rem;
+        left: -3rem;
+    }
+}
+
+/* ── Small mobile (≤360px) ── */
+@media (max-width: 360px) {
+    .skills {
+        padding: 1.5rem 0.75rem;
+        margin-top: 1.5rem;
+        gap: 1.2rem;
+    }
+
+    .skills-heading span:first-child,
+    .skills-heading span:last-child {
+        font-size: 1.2rem;
+    }
+
+    .skills-blur--purple,
+    .skills-blur--blue {
+        display: none;
+    }
+}

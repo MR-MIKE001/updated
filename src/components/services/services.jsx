@@ -3,7 +3,7 @@ import "./services.css";
 import glasses from "../../img/glasses.png";
 import humble from "../../img/humble.png";
 import Card from "../cards/card";
-import resume from "./Michael-A-Ibrahim.pdf";
+import resume from "./Micheal_Ibrahim_Premium_Resume.pdf";
 import { themeContext } from "../../contest";
 import { useContext } from "react";
 import { motion } from "framer-motion";
@@ -18,13 +18,9 @@ function Services() {
         <span style={{ color: darkMode ? "white" : "" }}>MY AWESOME</span>
         <span>SERVICES</span>
         <span>
-          I provide end-to-end web solutions, including front-end and back-end
-          development,
-          <br /> API design and integration, database management (SQL/NoSQL),
-          <br /> cloud deployment (render, heroku), UI/UX implementation,
-          e-commerce platforms,
-          <br /> and security and performance optimization. Let’s bring your
-          project to life!
+         I provide end-to-end software development solutions, delivering scalable, secure, and production-ready applications from concept to deployment.
+
+My expertise spans frontend and backend development, where I build high-performance user interfaces using React and TypeScript, and design robust backend systems with .NET, Node.js, and RESTful APIs.
           <br />
         </span>
         <a href={resume} download>
@@ -36,40 +32,42 @@ function Services() {
 
       <div className='cards'>
         <motion.div
-          whileInView={{ left: "-10rem" }}
-          initial={{ left: "20rem" }}
+        style={{ left: "-5rem" }}
+          initial={{ top: "2rem" }}
+          whileInView={{ top: "0rem"  }}
+          transition={transition}>
+        
+          <Card
+            emoji={glasses}
+            heading='Backend Architecture & API Development'
+            details='Designing secure, scalable APIs and system architectures using industry best practices and frameworks like .NET, Node.js, and RESTful API standards.'
+          />
+        </motion.div>
+         <motion.div
+         style={{left: "16rem" }}
+           initial={{ top: "2rem" }}
+          whileInView={{ top: "0rem"  }}
           transition={transition}>
           <Card
             emoji={glasses}
-            heading='WEB DEVELOPMENT'
-            details='HTML,CSS,Javascript,Nodejs,Mongodb'
+            heading='Database Design & Optimization'
+            details='Working with SQL and NoSQL databases to ensure efficient data modeling, integrity, and performance, including query optimization and indexing strategies.'
           />
         </motion.div>
         <motion.div
-          style={{ top: "12rem" }}
-          whileInView={{ left: "8rem" }}
-          initial={{ left: "0px" }}
+      
+          style={{left: "5.5rem" }}
+           initial={{ top: "-2rem" }}
+          whileInView={{ top: "0rem"  }}
           transition={transition}>
           <Card
             emoji={humble}
-            heading='MOBILE APP'
-            details='React-native, Java'
+            heading='Modern Frontend Development'
+            details='Creating responsive, accessible, and user-focused interfaces optimized for performance and scalability using React, TypeScript, and modern frontend tools.'
           />
         </motion.div>
-        <motion.div
-          style={{ top: "19rem", left: "12rem" }}
-          whileInView={{ left: "-12rem" }}
-          initial={{ left: "20rem" }}
-          transition={transition}>
-          <Card
-            emoji={glasses}
-            heading='UI/UX'
-            details='Figma, Adobe XD, Sketch'
-          />
-        </motion.div>
-        <div
-          className='blur s-blur2 '
-          style={{ background: "var(--purple)" }}></div>
+       
+        
       </div>
     </div>
   );

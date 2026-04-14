@@ -1,0 +1,12 @@
+.offer{
+    max-width: 100%;
+    margin: 1.5rem auto 0;
+    padding-top: 1rem   ;
+                /* light gray */
+}
+.offer__title{
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--orange);
+}

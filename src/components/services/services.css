@@ -1,163 +1,179 @@
-.services{
-    
-    
-    background-size: cover;
-    height: 40rem;
-    padding: 0 3rem 0 3rem;
+/* ── Base styles ── */
+.services {
     display: flex;
+    align-items: flex-start;
     width: 100%;
-    padding-top: 3rem;
-    margin-bottom: 8rem;
-    height: 90hv;
-    margin-bottom: 30rem;
+    padding: 3rem;
     margin-top: 5rem;
-
+    margin-bottom: 8rem;
+    gap: 2rem;
 }
 
-.awesome{
-    height: 90hv;
+.awesome {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 40%;
+    gap: 0.5rem;
 }
 
-.awesome>:nth-child(1){
+.awesome > :nth-child(1) {
     color: var(--black);
     font-size: 2rem;
     font-weight: bold;
-
 }
-.awesome>:nth-child(2){
+
+.awesome > :nth-child(2) {
     color: var(--orange);
     font-size: 2rem;
     font-weight: bold;
-    
 }
 
-.awesome>:nth-child(3){
-    color: var(--grey);
+.awesome > :nth-child(3) {
+    color: var(--gray);
     font-size: 16px;
-    
     margin-top: 1rem;
-    
+    line-height: 1.6;
 }
 
-.s-button{
+.s-button {
     width: 8rem;
     height: 2rem;
     margin-top: 1rem;
 }
-.cards{
-    
+
+.cards {
+    flex: 1;
     position: relative;
-    margin-left: 250px;
+    min-height: 25rem;
+    left: 5rem;
 }
-.cards>*{
+
+.cards > * {
     position: absolute;
+    width: 10rem;
 }
 
-.s-blur2{
-    left: 14rem;
-    top: 8rem;
-}
-
-.s-blur{
-    top:13rem;
-    left: -18rem;
-}
-@media screen and (max-width:414px){
-    .services{
-        width: 400px;        
-        margin-top: -6rem;
-        flex-direction: column;
-        gap: 5rem;
-        height: 75rem;
-        padding:0 25px;
-        margin-bottom: 30rem;
-
+/* ── Large desktop (≥1280px) ── */
+@media (min-width: 1280px) {
+    .services {
+        padding: 3rem 4rem;
     }
-    .s-button{
-    width: 8rem;
-    height: 2rem;
-    margin-top: 2rem;}
 
-    .awesome>:nth-child(1){
-    color: var(--black);
-    font-size: 2rem;
-    font-weight: bold;
-     margin-top:1.2rem;
-
-}
-.awesome>:nth-child(2){
-    color: var(--orange);
-    font-size: 2rem;
-    
-    margin-top:0.2rem;
-    font-weight: bold;
- 
-    
+    .awesome > :nth-child(1),
+    .awesome > :nth-child(2) {
+        font-size: 2.4rem;
+    }
 }
 
-.awesome>:nth-child(3){
-    color: var(--grey);
-    font-size: 14px;
-     margin-top:0.2rem;
-     width: 370px;
-    
+/* ── Tablet landscape (≤1024px) ── */
+@media (max-width: 1024px) {
+    .services {
+        padding: 2.5rem;
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+    }
+
+    .awesome {
+        width: 38%;
+    }
+
+    .awesome > :nth-child(1),
+    .awesome > :nth-child(2) {
+        font-size: 1.8rem;
+    }
+
+
+    .cards {
+        min-height: 25rem;
+        left: 2.3rem;
+    }
 }
-    .cards{
+
+/* ── Tablet portrait (≤768px) ── */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        padding: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        gap: 3rem;
+    }
+
+    .awesome {
+        width: 100%;
+    }
+
+    .awesome > :nth-child(1),
+    .awesome > :nth-child(2) {
+        font-size: 1.8rem;
+    }
+
+    .awesome > :nth-child(3) {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .cards {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 17rem;
-        right: 12rem;
+        gap: 1.5rem;
+        min-height: unset;
+        left: -1.7rem;
     }
-    .cards>*{
+
+    .cards > * {
         position: static;
     }
 }
-@media screen and (max-width:400px){
-    .services{
-        width: 400px;        
-        margin-top: -6rem;
-        flex-direction: column;
-        gap: 5rem;
-        height: 73rem;
-        padding:0 25px;
-        margin-bottom: 30rem;
 
+/* ── Mobile (≤480px) ── */
+@media (max-width: 480px) {
+    .services {
+        padding: 1.5rem 1rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        gap: 2.5rem;
     }
-.s-button{
-    width: 8rem;
-    height: 2rem;
-    margin-top: -1.5rem;}
-    .awesome>:nth-child(1){
-    color: var(--black);
-    font-size: 2rem;
-    font-weight: bold;
 
-}
-.awesome>:nth-child(2){
-    color: var(--orange);
-    font-size: 2rem;
-    margin-top:-0.2rem;
-    font-weight: bold;
-    
-}
-
-.awesome>:nth-child(3){
-    color: var(--grey);
-    font-size: 14px;
-     margin-top:0rem;
-     width: 290px;
-    
-}
-    .cards{
-        display: flex;
-        flex-direction: column;
-        gap: 17rem;
-        right: 12rem;
+    .awesome > :nth-child(1),
+    .awesome > :nth-child(2) {
+        font-size: 1.6rem;
     }
-    .cards>*{
-        position: static;
+
+    .awesome > :nth-child(3) {
+        font-size: 14px;
+    }
+
+    .s-button {
+        width: 7.5rem;
+        height: 2rem;
+        margin-top: 1.2rem;
+    }
+
+    .cards {
+        gap: 1.2rem;
+    }
+}
+
+/* ── Small mobile (≤360px) ── */
+@media (max-width: 360px) {
+    .services {
+        padding: 1rem 0.75rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .awesome > :nth-child(1),
+    .awesome > :nth-child(2) {
+        font-size: 1.4rem;
+    }
+
+    .awesome > :nth-child(3) {
+        font-size: 13px;
+    }
+
+    .s-button {
+        width: 7rem;
     }
 }
