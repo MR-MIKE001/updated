@@ -6,10 +6,12 @@ import Foot from "../components/footer/foot";
 function AppLayout({ children }) {
   return (
     <div>
+      
       <Nav />
-
+<main>
       {children}
       <Contact />
+      </main>
       <Foot />
     </div>
   );

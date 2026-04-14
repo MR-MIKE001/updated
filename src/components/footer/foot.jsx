@@ -7,7 +7,7 @@ function Foot() {
 
   return (
     <div className='footer'>
-      <img src={wave} alt='wave' className="footImg" />
+      <img src={wave} alt='Micheal A Ibrahim' className="footImg" />
       <div className='f-content'>
         <a href='mailto:aimrmike5@gmail.com'>aimrmike5@gmail.com</a>
         <div>

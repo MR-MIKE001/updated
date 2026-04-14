@@ -36,19 +36,19 @@ If you’re looking for a developer who delivers with precision and excellence, 
             initial={{transform:"rotate(90deg)"}}
             transition={transition}>
         <div className='m-mainsecircle'>
-            <img src={upwork} alt=''/>
+            <img src={upwork} alt='Upwork'/>
         </div>
         <div className='m-mainsecircle'>
-            <img src={fiver} alt=''/>
+            <img src={fiver} alt='Fiverr'/>
         </div>
         <div className='m-mainsecircle'>
-            <img src={amazon} alt='' style={{borderRadius:"50%"}} width={100}/>
+            <img src={amazon} alt='Vega IT' style={{borderRadius:"50%"}} width={100}/>
         </div>
         <div className='m-mainsecircle'>
-            <img src={shopify} alt='' style={{borderRadius:"50%"}} width={100}/>
+            <img src={shopify} alt='Finclusion IT' style={{borderRadius:"50%"}} width={100}/>
         </div>
         <div className='m-mainsecircle'>
-            <img src={facebook} alt='' style={{borderRadius:"50%"}} width={100}/>
+            <img src={facebook} alt='Africa International Housing Show' style={{borderRadius:"50%"}} width={100}/>
         </div>
 
 

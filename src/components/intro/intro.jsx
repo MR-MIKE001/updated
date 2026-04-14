@@ -25,7 +25,7 @@ function Intro({title,description}) {
   const theme = useContext(themeContext);
     const darkMode=theme.state.darkMode
   return (
-    <div className='intro'>
+    <section className='intro'>
     <div className='i-left'>
     <div className='i-name'>
    <span style={{color:darkMode? "white":"",
@@ -39,9 +39,9 @@ function Intro({title,description}) {
 <button className='button i-button'>Hire Me</button></Link>
 
  <div className='i-icons'>
-   <a href="https://github.com/MR-MIKE001" target="_blank" rel="noopener noreferrer"><img src={Github} alt="mike's github"/></a>
-    <a href="https://www.linkedin.com/in/micheal-ibrahim-57539937a" target="_blank" rel="noopener noreferrer"><img src={linked} alt='linkedin'/></a>
-    <a href="https://www.instagram.com/aimrmike5" target="_blank" rel="noopener noreferrer"><img src={instagram} alt='instagram'/></a>
+   <a href="https://github.com/MR-MIKE001" target="_blank" rel="noopener noreferrer"><img src={Github} alt="mr mike's github"/></a>
+    <a href="https://www.linkedin.com/in/micheal-ibrahim-57539937a" target="_blank" rel="noopener noreferrer"><img src={linked} alt='mr mike linkedin'/></a>
+    <a href="https://www.instagram.com/aimrmike5" target="_blank" rel="noopener noreferrer"><img src={instagram} alt='mr mike instagram'/></a>
 </div> 
 
     </div>
@@ -49,7 +49,7 @@ function Intro({title,description}) {
     <img src={vector1} alt=''/>
     <img src={vector2} alt=''/>
     <div className='boy-wrapper'>
-      <img src={title==="home"?boy:title==="about"?exper:title==="Experience"?about:title==="Services"?service:""} alt='micheal ibrahim'
+      <img src={title==="home"?boy:title==="about"?exper:title==="My Experience"?about:title==="Web And Mobile App Development Services"?service:""} alt='micheal ibrahim senior software engineer'
       width={350} height={350}  className='boy' style={{top:title==="home"?"":"5rem"}}/>
     </div>
    
@@ -92,7 +92,7 @@ function Intro({title,description}) {
     
     </div>
     
-    </div>
+    </section>
   )
 }
 
