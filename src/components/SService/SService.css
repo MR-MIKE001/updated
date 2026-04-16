@@ -10,3 +10,9 @@
     margin-bottom: 1rem;
     color: var(--orange);
 }
+.whatido-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}

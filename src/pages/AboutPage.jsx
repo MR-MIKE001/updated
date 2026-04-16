@@ -4,8 +4,6 @@ import Intro from "../components/intro/intro";
 import WhatIdo from "../components/whatIdo/WhatIdo.jsx";
 import HowIwork from "../components/howiwork/HowIwork.jsx";
 import { Helmet } from "react-helmet-async";
-import mrmike from "../../src/img/mr-mike.jpeg";
-
 function AboutPage() {
   return (
     <AppLayout>
@@ -20,7 +18,7 @@ function AboutPage() {
         />
         <meta
           name="keywords"
-          content="web developer, senior software engineer, backend engineer, frontend engineer, portfolio"
+          content="web developer, senior software engineer, backend engineer, frontend engineer,senior software engineer in Nigeria, experienced full‑stack JavaScript developer, React, Node.js and .NET developer, mobile app developer (Flutter / React Native), backend and frontend engineer, web developer with 8+ years experience , Nigerian software engineer portfolio"
         />
 
         {/* ✅ Open Graph */}
@@ -32,7 +30,7 @@ function AboutPage() {
           property="og:description"
           content="Learn more about Micheal Ibrahim, a Senior Software Engineer focused on scalable applications."
         />
-        <meta property="og:image" content={mrmike} />
+        <meta property="og:image" content="../../src/img/mr-mike.jpeg" />
         <meta
           property="og:url"
           content="https://mr-mike-site.onrender.com/about"

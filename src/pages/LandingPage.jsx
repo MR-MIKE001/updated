@@ -5,7 +5,6 @@ import Portfolio from "../components/portfolio/portfolio";
 import Services from "../components/services/services";
 import Work from "../components/works/work";
 import AppLayout from "../kayout/AppLayout";
-import mrmike from "../../src/img/mr-mike.jpeg";
 
 function LandingPage() {
   return (
@@ -21,7 +20,7 @@ function LandingPage() {
         />
         <meta
           name="keywords"
-          content="web developer, mobile app developer, backend developer, frontend engineer, portfolio"
+          content="web developer, mobile app developer, backend developer, frontend engineer, full‑stack web developer in Nigeria, full‑stack web and mobile app developer, React and Node.js developer, freelance full‑stack developer, MERN stack developer in Port Harcourt, mobile app and web app development, hire a full‑stack developer, professional web developer portfolio, hire .Net developer, "
         />
 
         {/* ✅ Open Graph */}
@@ -34,7 +33,7 @@ function LandingPage() {
           property="og:description"
           content="Senior Software Engineer portfolio showcasing projects and experience."
         />
-        <meta property="og:image" content={mrmike} />
+        <meta property="og:image" content="../../src/img/mr-mike.jpeg" />
         <meta
           property="og:url"
           content="https://mr-mike-site.onrender.com/"

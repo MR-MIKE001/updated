@@ -5,7 +5,7 @@ import Intro from "../components/intro/intro";
 import Offer from "../components/offer/Offer";
 import SService from "../components/SService/SService";
 import AppLayout from "../kayout/AppLayout";
-import mrmike from "../../src/img/mr-mike.jpeg";
+
 
 function ServicesPage() {
   const personSchema = {
@@ -30,7 +30,7 @@ function ServicesPage() {
         />
         <meta
           name="keywords"
-          content="web development, frontend engineer, backend engineer, mobile app development, UI/UX design, portfolio"
+          content="web development, frontend engineer, backend engineer, mobile app development, UI/UX design, custom web application development services, mobile app development services in Nigeria, ecommerce website and app development, API and backend development (Node.js / .NET), responsive website design and UI/UX, maintenance and support for web applications, business website development for SMEs in Nigeria, MVP development for startups"
         />
 
         <meta
@@ -41,7 +41,7 @@ function ServicesPage() {
           property="og:description"
           content="I offer a range of services including web development, mobile app development, and UI/UX design. My goal is to deliver high-quality solutions that meet your business needs and exceed your expectations."
         />
-        <meta property="og:image" content={mrmike} />
+        <meta property="og:image" content="../../src/img/mr-mike.jpeg" />
         <meta
           property="og:url"
           content="https://mr-mike-site.onrender.com/services"

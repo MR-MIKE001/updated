@@ -5,7 +5,6 @@ import Intro from "../components/intro/intro";
 import Portfolio from "../components/portfolio/portfolio";
 import Professional from "../components/professional/Professional";
 import Skills from "../components/skills/Skills";
-import mrmike from "../../src/img/mr-mike.jpeg";
 
 import AppLayout from "../kayout/AppLayout";
 
@@ -32,7 +31,7 @@ function ExperiencePage() {
         />
         <meta
           name="keywords"
-          content="web developer, backend engineer, frontend engineer, MERN stack, .NET, React Native, portfolio"
+          content="web developer, backend engineer, frontend engineer, MERN stack, .NET, React Native, full‑stack developer project portfolio, React and Node.js project experience, enterprise web application development, REST API development and integration, cloud‑hosted web apps (Render, Supabase, etc.), database design with MongoDB and PostgreSQL, real‑time apps, payments, and authentication projects"
         />
 
         <meta
@@ -43,7 +42,7 @@ function ExperiencePage() {
           property="og:description"
           content="Senior Software Engineer portfolio showcasing projects and experience."
         />
-        <meta property="og:image" content={mrmike} />
+        <meta property="og:image" content="../../src/img/mr-mike.jpeg" />
         <meta
           property="og:url"
           content="https://mr-mike-site.onrender.com/experience"
