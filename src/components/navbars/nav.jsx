@@ -8,8 +8,8 @@ import { themeContext } from "../../contest";
 const navData = [
   { id: 1, title: "Home", to: "/" },
   { id: 2, title: "About", to: "/about" },
-  { id: 3, title: "Services", to: "/services" },
   { id: 4, title: "Experience", to: "/experience" },
+  { id: 3, title: "Services", to: "/services" },
 ];
 
 function Nav() {
