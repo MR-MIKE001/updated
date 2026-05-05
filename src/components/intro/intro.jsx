@@ -1,21 +1,21 @@
 import React from 'react'
 import "./intro.css"
-import vector1 from "../../img/Vector1.png"
-import vector2 from "../../img/Vector2.png"
-import boy from "../../img/mr-mike.jpeg"
-import thumbup from "../../img/thumbup.png"
-import crown from "../../img/crown.png"
-import glasses from "../../img/glassesimoji.png"
+import vector1 from "../../img/Vector1.webp"
+import vector2 from "../../img/Vector2.webp"
+import boy from "../../img/mr-mike.webp"
+import thumbup from "../../img/thumbup.webp"
+import crown from "../../img/crown.webp"
+import glasses from "../../img/glassesimoji.webp"
 import FloatingDiv from '../floatingDiv/Floating'
 import { themeContext } from '../../contest'
 import { useContext } from 'react';
 import { motion } from 'framer-motion';
-import Github from "../../img/github.png"
-import linked from "../../img/linkedin.png"
-import instagram from "../../img/instagram.png"
-import about from "../../img/about-me.jpg"
-import exper from "../../img/experience.jpg"
-import service from "../../img/ser.png"
+import Github from "../../img/github.webp"
+import linked from "../../img/linkedin.webp"
+import instagram from "../../img/instagram.webp"
+import about from "../../img/about-me.webp"
+import exper from "../../img/experience.webp"
+import service from "../../img/ser.webp"
 
 import { Link } from 'react-scroll'
 

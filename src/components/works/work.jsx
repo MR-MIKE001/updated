@@ -1,10 +1,10 @@
 import React from 'react'
 import "./work.css"
-import upwork from '../../img/Upwork.png'
-import fiver from '../../img/fiverr.png'
-import shopify from '../../img/fin.png'
-import amazon from '../../img/vegalogo.png'
-import facebook from '../../img/ahis_logo.png'
+import upwork from '../../img/Upwork.webp'
+import fiver from '../../img/fiverr.webp'
+import shopify from '../../img/fin.webp'
+import amazon from '../../img/vegalogo.webp'
+import facebook from '../../img/ahis_logo.webp'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { themeContext } from "../../contest";
@@ -60,11 +60,7 @@ If you’re looking for a developer who delivers with precision and excellence, 
 
    <div className='m-backcircle blueCircle'></div>
    <div className='m-backcircle yellowCircle'></div>
-
         </div>
-
-
-    
     </div>
   )
 }

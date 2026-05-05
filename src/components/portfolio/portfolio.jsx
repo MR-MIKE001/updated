@@ -1,10 +1,10 @@
 
 import "./portfolio.css";
-import hoc from "../../img/ahis_logo.png";
-import agentity from "../../img/agentitypage.png";
-import chat from '../../img/chatlogo.PNG'
-import airbnb from "../../img/aii.png";
-import nike from '../../img/Nikebg.PNG'
+import hoc from "../../img/ahis_logo.webp";
+import agentity from "../../img/agentitypage.webp";
+import chat from '../../img/chatlogo.webp'
+import airbnb from "../../img/aii.webp";
+import nike from '../../img/Nikebg.webp'
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

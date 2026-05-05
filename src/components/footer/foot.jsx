@@ -1,6 +1,6 @@
 
 import "./footer.css";
-import wave from "../../img/wave.png";
+import wave from "../../img/wave.webp";
 import { UilFacebook, UilWhatsapp, UilTwitter } from "@iconscout/react-unicons";
 
 function Foot() {

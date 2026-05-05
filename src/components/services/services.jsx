@@ -1,7 +1,7 @@
 
 import "./services.css";
-import glasses from "../../img/glasses.png";
-import humble from "../../img/humble.png";
+import glasses from "../../img/glasses.webp";
+import humble from "../../img/humble.webp";
 import Card from "../cards/card";
 import resume from "./Micheal_Ibrahim_Premium_Resume.pdf";
 import { themeContext } from "../../contest";
