@@ -1,0 +1,74 @@
+<!--
+  EmailJS template for the portfolio contact form (template_njdb4ji).
+  Paste into EmailJS → Email Templates → Content → "Edit content" → code view.
+  Variables sent by src/components/contact/contact.jsx: {{user}}, {{email}}, {{message}}, {{time}}
+  Suggested settings — Subject: New enquiry from {{user}}  ·  Reply To: {{email}}
+-->
+<div style="margin: 0; padding: 24px 12px; background-color: #f4f5f7; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 560px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e6e7ec; border-radius: 12px; overflow: hidden;">
+    <!-- Accent bar -->
+    <tr>
+      <td style="height: 4px; background-color: #f59e0b; background-image: linear-gradient(90deg, #fbbf24, #f97316); font-size: 0; line-height: 0;">&nbsp;</td>
+    </tr>
+
+    <!-- Header -->
+    <tr>
+      <td style="padding: 24px 28px 8px;">
+        <div style="font-size: 16px; font-weight: 800; letter-spacing: 0.5px; color: #12141a;">
+          MR<span style="color: #f59e0b;">_</span>MIKE
+        </div>
+        <div style="margin-top: 16px; font-size: 20px; font-weight: 700; color: #12141a;">
+          New message from your website
+        </div>
+        <div style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: #5a6072;">
+          A message by <strong style="color: #12141a;">{{user}}</strong> has been received. Kindly respond at your earliest convenience.
+        </div>
+      </td>
+    </tr>
+
+    <!-- Sender card -->
+    <tr>
+      <td style="padding: 16px 28px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f7f7f9; border: 1px solid #e6e7ec; border-radius: 10px;">
+          <tr>
+            <td width="56" style="padding: 16px 0 16px 16px; vertical-align: top;">
+              <div role="img" aria-label="Sender" style="width: 44px; height: 44px; line-height: 44px; text-align: center; font-size: 22px; background-color: #fef3c7; border-radius: 10px;">👤</div>
+            </td>
+            <td style="padding: 16px; vertical-align: top;">
+              <div style="font-size: 16px; font-weight: 700; color: #12141a;">{{user}}</div>
+              <div style="margin-top: 2px; font-size: 14px;">
+                <a href="mailto:{{email}}" style="color: #b45309; text-decoration: none;">{{email}}</a>
+              </div>
+              <div style="margin-top: 2px; font-size: 12px; color: #8b92a3;">{{time}}</div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Message -->
+    <tr>
+      <td style="padding: 8px 28px 4px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #8b92a3;">Message</div>
+        <div style="margin-top: 8px; padding: 16px; border-left: 3px solid #f59e0b; background-color: #fffbeb; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.6; color: #12141a; white-space: pre-wrap;">{{message}}</div>
+      </td>
+    </tr>
+
+    <!-- Reply button -->
+    <tr>
+      <td style="padding: 24px 28px 28px;">
+        <a href="mailto:{{email}}?subject=Re:%20Your%20enquiry" style="display: inline-block; padding: 12px 24px; background-color: #f59e0b; color: #1a1204; font-size: 14px; font-weight: 700; text-decoration: none; border-radius: 999px;">
+          Reply to {{user}}
+        </a>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td style="padding: 16px 28px; border-top: 1px dashed #e6e7ec; font-size: 12px; line-height: 1.5; color: #8b92a3;">
+        Sent from the contact form on
+        <a href="https://mr-mike-site.onrender.com" style="color: #8b92a3;">mr-mike-site.onrender.com</a>
+      </td>
+    </tr>
+  </table>
+</div>

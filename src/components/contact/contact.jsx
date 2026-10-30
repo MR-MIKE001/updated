@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { UilEnvelope, UilPhone, UilWhatsapp } from "@iconscout/react-unicons";
 
 const channels = [
-  { Icon: UilEnvelope, label: "Email", value: "aimrmike5@gmail.com", href: "mailto:aimrmike5@gmail.com" },
+  { Icon: UilEnvelope, label: "Email", value: "Micheal.A.Ibrahim@gmail.com", href: "mailto:Micheal.A.Ibrahim@gmail.com" },
   { Icon: UilPhone, label: "Phone", value: "+234 810 943 3307", href: "tel:+2348109433307" },
   { Icon: UilWhatsapp, label: "WhatsApp", value: "Chat with me", href: "https://wa.me/+2348109433307" },
 ];
@@ -43,12 +43,17 @@ function Contact() {
       return;
     }
     setStatus("sending");
+    // Filled at submit time for the {{time}} variable in the EmailJS template
+    formRef.current.time.value = new Date().toLocaleString("en-GB", {
+      dateStyle: "medium",
+      timeStyle: "short",
+    });
     emailjs
       .sendForm(
-        "service_n1uaqvd",
-        "template_njdb4ji",
+        "service_ygvqwyo",
+        "template_awk4jpm",
         formRef.current,
-        "40FBwbA7TtkG8a-e9"
+        "tTLmV50qtvkZOakf0"
       )
       .then(() => {
         setStatus("success");
@@ -96,6 +101,7 @@ function Contact() {
 
         <div className="c-right">
           <form ref={formRef} onSubmit={sendEmail} noValidate>
+            <input type="hidden" name="time" />
             <div className="c-field">
               <label htmlFor="c-name">Name</label>
               <input
