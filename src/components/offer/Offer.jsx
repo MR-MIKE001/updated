@@ -2,33 +2,20 @@ import offerData from "./offerDate";
 import Pricing from "./pricing/Pricing";
 import GetInTouch from "../getInTouch/GetInTouch";
 import "./Offer.css"
+
 function Offer() {
   return (
-    <div
-    className="offer"
-    >
-      <h2 className="offer__title" >
-        Here are some of our packages
-      </h2>
-
-      {/* {offerData.map((offer, index) => (
-        <div
-          key={index}
-          style={{
-            background: darkMode ? "#3f3f3f" : "#ffffff",
-            color: darkMode ? "#ffffff" : "#000000",
-            margin: "20px 0",
-            padding: "20px",
-            borderRadius: "10px",
-          }}
-        >
-          <Pricing se
-          rvices={offer.services} />
+    <section className="section offer">
+      <div className="container">
+        <div className="section-head section-head--center">
+          <span className="eyebrow">Pricing</span>
+          <h2 className="section-title offer__title">Here are some of our <span className="accent">packages</span></h2>
+          <p className="section-lead">Transparent starting prices. Every project is scoped to your goals before work begins.</p>
         </div>
-      ))} */}
-      <Pricing services={offerData} />
-      <GetInTouch/>
-    </div>
+        <Pricing services={offerData} />
+        <GetInTouch />
+      </div>
+    </section>
   );
 }
 

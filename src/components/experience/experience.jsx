@@ -1,27 +1,26 @@
 import React from 'react'
 import './experience.css'
-import { themeContext } from "../../contest";
-import { useContext } from "react";
+
+const stats = [
+  { value: "6+", label: "Years of experience" },
+  { value: "20+", label: "Completed projects" },
+  { value: "5+", label: "Companies worked with" },
+]
 
 function Experience() {
-const darkMode  = useContext(themeContext).state.darkMode;
-
   return (
-    <div style={{background:darkMode?" #2f2f2f":" #c7bebeff"}}   className='experience'>
-        <div className='achievement'>
-         <div className='circle'>6+</div>
-        <span>years</span>
-        <span>experience</span></div>
-        <div className='achievement'>
-         <div className='circle'>20+</div>
-        <span>completed</span>
-        <span>projects</span></div>
-        <div className='achievement'>
-         <div className='circle'>5+</div>
-        <span>companies</span>
-        <span>work</span>
+    <section className='experience-wrap'>
+      <div className='container'>
+        <div className='experience'>
+          {stats.map((stat) => (
+            <div className='achievement' key={stat.label}>
+              <div className='circle'>{stat.value}</div>
+              <span>{stat.label}</span>
+            </div>
+          ))}
         </div>
-        </div>
+      </div>
+    </section>
   )
 }
 

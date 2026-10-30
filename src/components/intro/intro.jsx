@@ -1,97 +1,104 @@
 import React from 'react'
 import "./intro.css"
-import vector1 from "../../img/Vector1.webp"
-import vector2 from "../../img/Vector2.webp"
 import boy from "../../img/mr-mike.webp"
 import thumbup from "../../img/thumbup.webp"
 import crown from "../../img/crown.webp"
-import glasses from "../../img/glassesimoji.webp"
 import FloatingDiv from '../floatingDiv/Floating'
-import { themeContext } from '../../contest'
-import { useContext } from 'react';
 import { motion } from 'framer-motion';
-import Github from "../../img/github.webp"
-import linked from "../../img/linkedin.webp"
-import instagram from "../../img/instagram.webp"
+import { UilGithub, UilLinkedin, UilInstagram, UilArrowDown } from '@iconscout/react-unicons'
 import about from "../../img/about-me.webp"
 import exper from "../../img/experience.webp"
 import service from "../../img/ser.webp"
+import resume from "../services/Micheal_Ibrahim_CV.pdf";
 
 import { Link } from 'react-scroll'
 
-function Intro({title,description}) {
+// Per-page hero content, keyed by the `title` prop each page passes in
+const heroes = {
+  home: { eyebrow: "Senior Software Engineer", heading: <>Hi, I'm <span className="accent">Micheal Ibrahim</span></>, image: boy },
+  about: { eyebrow: "Get to know me", heading: <>About <span className="accent">Me</span></>, image: exper },
+  "My Experience": { eyebrow: "Career & skills", heading: <>My <span className="accent">Experience</span></>, image: about },
+  "Web And Mobile App Development Services": { eyebrow: "What I offer", heading: <>Web & Mobile App <span className="accent">Development Services</span></>, image: service },
+};
 
-  const transition={duration:2, type:"string"}
-  const theme = useContext(themeContext);
-    const darkMode=theme.state.darkMode
+const socials = [
+  { href: "https://github.com/MR-MIKE001", label: "GitHub", Icon: UilGithub },
+  { href: "https://www.linkedin.com/in/micheal-ibrahim-57539937a", label: "LinkedIn", Icon: UilLinkedin },
+  { href: "https://www.instagram.com/aimrmike5", label: "Instagram", Icon: UilInstagram },
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" } }),
+};
+
+function Intro({ title, description }) {
+  const hero = heroes[title] || { eyebrow: "", heading: title, image: boy };
+  const paragraphs = description.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+
   return (
     <section className='intro'>
-    <div className='i-left'>
-    <div className='i-name'>
-   <span style={{color:darkMode? "white":"",
-   }}> {title==="home"?"HI I AM":""}</span>
-   <span style={{color:darkMode? "white":"",
-   }}> {title==="home"?"MICHEAL IBRAHIM":title==="about"?"ABOUT ME":title}</span>
-   <span style={{color:darkMode? "white":"black",
-   }}> {description}</span>
-</div>
-<Link spy={true} to='contact' smooth={true}>
-<button className='button i-button'>Hire Me</button></Link>
+      <div className='intro-bg' aria-hidden="true" />
+      <div className='container intro-inner'>
+        <motion.div className='i-left' initial="hidden" animate="show">
+          {hero.eyebrow && (
+            <motion.span className='eyebrow' variants={fadeUp} custom={0}>{hero.eyebrow}</motion.span>
+          )}
+          <motion.h1 className='i-title' variants={fadeUp} custom={1}>{hero.heading}</motion.h1>
+          <motion.div className='i-description' variants={fadeUp} custom={2}>
+            {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+          </motion.div>
 
- <div className='i-icons'>
-   <a href="https://github.com/MR-MIKE001" target="_blank" rel="noopener noreferrer"><img src={Github} alt="mr mike's github"/></a>
-    <a href="https://www.linkedin.com/in/micheal-ibrahim-57539937a" target="_blank" rel="noopener noreferrer"><img src={linked} alt='mr mike linkedin'/></a>
-    <a href="https://www.instagram.com/aimrmike5" target="_blank" rel="noopener noreferrer"><img src={instagram} alt='mr mike instagram'/></a>
-</div> 
+          <motion.div className='i-actions' variants={fadeUp} custom={3}>
+            <Link to='contact' smooth={true} offset={-60}>
+              <button className='button'>Hire Me</button>
+            </Link>
+            <a href={resume} download className='button button--ghost'>
+              <UilArrowDown size="18" /> Download CV
+            </a>
+          </motion.div>
 
-    </div>
-    <div className='i-right'>
-    <img src={vector1} alt=''/>
-    <img src={vector2} alt=''/>
-    <div className='boy-wrapper'>
-      <img src={title==="home"?boy:title==="about"?exper:title==="My Experience"?about:title==="Web And Mobile App Development Services"?service:""} alt='micheal ibrahim senior software engineer'
-      width={350} height={350}  className='boy' style={{top:title==="home"?"":"5rem"}}/>
-    </div>
-   
-    <motion.img 
-    initial={{left:"-10%"}}
-    whileInView={{left:"0%"}}
-    transition={transition}
-    src={glasses} alt=''/>
-   <motion.div 
-   initial={{top:"-4%", left:"70%"}}
-   whileInView={{left:"60%"}}
-   transition={transition}
+          <motion.div className='i-icons' variants={fadeUp} custom={4}>
+            {socials.map(({ href, label, Icon }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={`Micheal on ${label}`}>
+                <Icon size="20" />
+              </a>
+            ))}
+          </motion.div>
+        </motion.div>
 
-   style={{top:'-4%'}}
-   className='.floating-div'>
-   <FloatingDiv txt1="web" txt2="developer"
-    image={crown}/>
-   </motion.div>
-   <motion.div
-   initial={{left:"9rem", top:"18rem"}}
-   whileInView={{left:"16rem"}}
-   transition={transition}
-    style={{top:'18rem', left:'0rem'}}
-    className='.floating-div' id="floating-div">
-   <FloatingDiv txt1="best design" txt2="award" image={thumbup}/>
-   </motion.div>
+        <motion.div
+          className='i-right'
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          <div className='i-photo'>
+            <img
+              src={hero.image}
+              alt='Micheal Ibrahim, senior software engineer'
+              width={480}
+              height={600}
+              className={title === "Web And Mobile App Development Services" ? "top" : ""}
+            />
+          </div>
 
-    {/* {blur div}
-     */}
-    <div className='blur' style={{background:"rgb(238 210 255)" }}>
-</div>
-<div className='blur' style={{
-        background:"#c1f5ff",
-        top:"17rem",
-        left:'-9rem',
-        width:"21rem",
-        height:'11rem'
-    }}></div>
-    
-    
-    </div>
-    
+          <motion.div
+            className='i-badge i-badge--top'
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <FloatingDiv txt1="Web" txt2="Developer" image={crown} />
+          </motion.div>
+          <motion.div
+            className='i-badge i-badge--bottom'
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <FloatingDiv txt1="Best Design" txt2="Award" image={thumbup} />
+          </motion.div>
+        </motion.div>
+      </div>
     </section>
   )
 }

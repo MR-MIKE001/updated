@@ -1,116 +1,52 @@
-/* ── Base styles ── */
-.prof {
-    width: 100%;
-    padding: 3rem 2rem;
+.ecards {
+    position: relative;
+    list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 5rem;
-    box-sizing: border-box;
-    overflow: hidden;
+    gap: 1.5rem;
+    padding-left: 2.25rem;
 }
 
-.prof h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: var(--orange);
-    text-align: center;
-    line-height: 1.3;
+/* Timeline rail */
+.ecards::before {
+    content: "";
+    position: absolute;
+    left: 0.45rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--border));
 }
 
-.ecards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 1rem;
-    width: 100%;
-    max-width: 1100px;
+.ecards > li {
+    position: relative;
 }
 
-/* ── Large desktop (≥1280px) ── */
-@media (min-width: 1280px) {
-    .prof {
-        padding: 3rem 4rem;
-    }
-
-    .prof h1 {
-        font-size: 2.8rem;
-    }
-
-    .ecards {
-        gap: 1.5rem;
-    }
+/* Timeline dot */
+.ecards > li::before {
+    content: "";
+    position: absolute;
+    left: -2.25rem;
+    top: 1.6rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 999px;
+    background: var(--bg-alt);
+    border: 3px solid var(--accent);
 }
 
-/* ── Tablet landscape (≤1024px) ── */
-@media (max-width: 1024px) {
-    .prof {
-        padding: 2.5rem 2rem;
-        margin-top: 4rem;
-    }
-
-    .prof h1 {
-        font-size: 2.2rem;
-    }
-
-    .ecards {
-        gap: 1rem;
-        max-width: 900px;
-    }
-}
-
-/* ── Tablet portrait (≤768px) ── */
-@media (max-width: 768px) {
-    .prof {
-        padding: 2rem 1.5rem;
-        margin-top: 3rem;
-    }
-
-    .prof h1 {
-        font-size: 1.9rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .ecards {
-        gap: 0.9rem;
-        max-width: 100%;
-    }
-}
-
-/* ── Mobile (≤480px) ── */
 @media (max-width: 480px) {
-    .prof {
-        padding: 1.5rem 1rem;
-        margin-top: 2rem;
-    }
-
-    .prof h1 {
-        font-size: 1.6rem;
-        margin-bottom: 0.7rem;
-    }
-
     .ecards {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-}
-
-/* ── Small mobile (≤360px) ── */
-@media (max-width: 360px) {
-    .prof {
-        padding: 1rem 0.75rem;
-        margin-top: 1.5rem;
+        padding-left: 1.5rem;
     }
 
-    .prof h1 {
-        font-size: 1.4rem;
-        margin-bottom: 0.6rem;
+    .ecards::before {
+        left: 0.3rem;
     }
 
-    .ecards {
-        gap: 0.7rem;
+    .ecards > li::before {
+        left: -1.5rem;
+        width: 0.8rem;
+        height: 0.8rem;
     }
 }

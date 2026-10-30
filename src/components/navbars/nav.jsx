@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./nav.css";
 import Toggle from "../toggle/toggle";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, NavLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { themeContext } from "../../contest";
 
 const navData = [
   { id: 1, title: "Home", to: "/" },
@@ -13,68 +12,82 @@ const navData = [
 ];
 
 function Nav() {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   const closeMenu = () => setMenuOpen(false);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(closeMenu, [location.pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   return (
-    <>
-      <div className="n-wrapper"  style={{ color: darkMode ? "white" : "" }}>
-        {/* Left */}
-        <div className="n-left">
-          <div className="n-name">MR_MIKE</div>
+    <header className={`n-wrapper ${scrolled ? "scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}>
+      <div className="container n-inner">
+        <RouterLink to="/" className="n-name" aria-label="Mr Mike — home">
+          MR<span>_</span>MIKE
+        </RouterLink>
+
+        <nav className="n-list" aria-label="Main">
+          <ul>
+            {navData.map((item) => (
+              <li key={item.id}>
+                <NavLink to={item.to} end className="n-link">
+                  {item.title}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="n-actions">
           <Toggle />
-        </div>
-
-        {/* Desktop right */}
-        <div className="n-right">
-          <div className="n-list">
-            <ul style={{ listStyleType: "none", color: darkMode ? "white" : "black" }}>
-              {navData.map((item) => (
-                <RouterLink key={item.id} to={item.to}>
-                  <li style={{color:darkMode?"white":"black"}}>{item.title}</li>
-                </RouterLink>
-              ))}
-            </ul>
-          </div>
-
-          <ScrollLink spy={true} to="contact" smooth={true}>
-            <button className="button n-button">contact us</button>
+          <ScrollLink to="contact" smooth={true} offset={-60} className="n-cta">
+            <button className="button button--sm">Contact me</button>
           </ScrollLink>
-        </div>
-
-        {/* Hamburger */}
-        <div
-         
-          className={`n-hamburger ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen((prev) => !prev)}
-          aria-label="Toggle menu"
-        >
-          <span style={{ background: darkMode ? "white" : "black" }} />
-          <span style={{ background: darkMode ? "white" : "black" }} />
-          <span style={{ background: darkMode ? "white" : "black" }} />
+          <button
+            type="button"
+            className={`n-hamburger ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`n-mobile-menu ${menuOpen ? "open" : ""}`}>
-        <ul style={{ color: darkMode ? "white" : "black" }}>
+      <div id="mobile-menu" className={`n-mobile-menu ${menuOpen ? "open" : ""}`}>
+        <ul>
           {navData.map((item) => (
-            <RouterLink key={item.id} to={item.to} onClick={closeMenu}>
-              <li>{item.title}</li>
-            </RouterLink>
+            <li key={item.id}>
+              <NavLink to={item.to} end className="n-link" onClick={closeMenu}>
+                {item.title}
+              </NavLink>
+            </li>
           ))}
         </ul>
-
-        <div className="n-mobile-button">
-          <ScrollLink spy={true} to="contact" smooth={true} onClick={closeMenu}>
-            <button className="button">contact us</button>
-          </ScrollLink>
-        </div>
+        <ScrollLink to="contact" smooth={true} offset={-60} onClick={closeMenu}>
+          <button className="button n-mobile-button">Contact me</button>
+        </ScrollLink>
       </div>
-    </>
+    </header>
   );
 }
 

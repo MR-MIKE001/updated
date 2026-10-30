@@ -1,18 +1,17 @@
-.service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    margin-top: 5rem;
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
 }
-.service h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--orange);
+
+@media (max-width: 960px) {
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-.whatido-cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+
+@media (max-width: 600px) {
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
 }

@@ -7,61 +7,52 @@ import amazon from '../../img/vegalogo.webp'
 import facebook from '../../img/ahis_logo.webp'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
-import { themeContext } from "../../contest";
-import { useContext } from "react";
+
+const brands = [
+  { logo: amazon, name: 'Vega IT' },
+  { logo: facebook, name: 'Africa International Housing Show' },
+  { logo: shopify, name: 'Finclusion' },
+  { logo: upwork, name: 'Upwork' },
+  { logo: fiver, name: 'Fiverr' },
+]
 
 function Work() {
-const darkMode = useContext(themeContext).state.darkMode;
-  const transition={duration:2, type:"string"}
   return (
-    <div  className='work'>
-      <div id='m-left' className='awesome'>
-        <span style={{ color: darkMode ? "white" : "" }}>WORKED FOR ALL BRANDS</span>
-        <span>BRANDS AND CLIENTS</span>
-        <span className='space'>I’ve collaborated with reputable organizations such as Vega IT and Africa International Housing Show, alongside delivering solutions for global clients on Upwork and Fiverr. My work focuses on building scalable, high-performance applications with a strong emphasis on quality, reliability, and user experience.
-If you’re looking for a developer who delivers with precision and excellence, let’s create something exceptional.   </span>
-<Link spy={true} to='contact' smooth={true}>
-        <button className='button s-button'>Hire Me
-        </button></Link>
-        
-        
-        <div className='blur s-blur' style={{background:"#abf1ff94", }}></div>
+    <section className='section work'>
+      <div className='container work-inner'>
+        <div id='m-left'>
+          <span className='eyebrow'>Worked with great brands</span>
+          <h2 className='section-title'>Brands <span className='accent'>&amp;</span> Clients</h2>
+          <p className='section-lead'>
+            I’ve collaborated with reputable organizations such as Vega IT and Africa International Housing Show, alongside delivering solutions for global clients on Upwork and Fiverr. My work focuses on building scalable, high-performance applications with a strong emphasis on quality, reliability, and user experience.
+          </p>
+          <p className='section-lead'>
+            If you’re looking for a developer who delivers with precision and excellence, let’s create something exceptional.
+          </p>
+          <Link to='contact' smooth={true} offset={-60}>
+            <button className='button s-button'>Hire Me</button>
+          </Link>
         </div>
-        
 
         <div className='m-right'>
-        <motion.div className='m-maincircle'
-         
-            whileInView={{transform:"rotate(0deg)"}}
-            initial={{transform:"rotate(90deg)"}}
-            transition={transition}>
-        <div className='m-mainsecircle'>
-            <img src={upwork} alt='Upwork'/>
+          {brands.map((brand, i) => (
+            <motion.div
+              key={brand.name}
+              className='m-brand'
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+            >
+              <div className='m-logo'>
+                <img src={brand.logo} alt={brand.name} loading="lazy" />
+              </div>
+              <span>{brand.name}</span>
+            </motion.div>
+          ))}
         </div>
-        <div className='m-mainsecircle'>
-            <img src={fiver} alt='Fiverr'/>
-        </div>
-        <div className='m-mainsecircle'>
-            <img src={amazon} alt='Vega IT' style={{borderRadius:"50%"}} width={100}/>
-        </div>
-        <div className='m-mainsecircle'>
-            <img src={shopify} alt='Finclusion IT' style={{borderRadius:"50%"}} width={100}/>
-        </div>
-        <div className='m-mainsecircle'>
-            <img src={facebook} alt='Africa International Housing Show' style={{borderRadius:"50%"}} width={100}/>
-        </div>
-
-
-
-
-
-
-        </motion.div>
-
-   <div className='m-backcircle blueCircle'></div>
-   <div className='m-backcircle yellowCircle'></div>
-        </div>
-    </div>
+      </div>
+    </section>
   )
 }
 
