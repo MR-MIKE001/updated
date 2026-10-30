@@ -45,8 +45,8 @@ function Foot() {
 
           <div className="f-col">
             <h4>Contact</h4>
-            <a href="mailto:aimrmike5@gmail.com">
-              <UilEnvelope size="16" /> aimrmike5@gmail.com
+            <a href="mailto:Micheal.A.Ibrahim@gmail.com">
+              <UilEnvelope size="16" /> Micheal.A.Ibrahim@gmail.com
             </a>
             <a href="tel:+2348109433307">
               <UilPhone size="16" /> +234 810 943 3307

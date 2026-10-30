@@ -12,8 +12,8 @@ function GetInTouch() {
         <ul className="get-in-touch__list">
           <li className="get-in-touch__item">
             <span className="get-in-touch__label">Email</span>
-            <a href="mailto:aimrmike5@gmail.com" className="get-in-touch__link">
-              aimrmike5@gmail.com
+            <a href="mailto:Micheal.A.Ibrahim@gmail.com" className="get-in-touch__link">
+              Micheal.A.Ibrahim@gmail.com
             </a>
           </li>
           <li className="get-in-touch__item">
