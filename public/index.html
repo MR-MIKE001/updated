@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="MICHEAL A IBRAHIM (MR-MIKE)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0c0e13" media="(prefers-color-scheme: dark)" />
 
     <meta
       name="description"
       content="Professional full-stack web and mobile app developer in Nigeria, specializing in responsive web design, scalable applications, and modern technologies like React, Node.js, and Flutter. Hire a reliable developer near you."
     />
-<meta name="google-site-verification" content="olxAOJM57JpyJZTk-stVu8x58PnrtkKB-XQPCOlo2b4" />
+    <meta name="google-site-verification" content="olxAOJM57JpyJZTk-stVu8x58PnrtkKB-XQPCOlo2b4" />
     <meta
       name="keywords"
       content="full-stack developer portfolio, mobile app developer portfolio, hire a web developer, React developer, Node.js expert, web and app development services, custom API development, responsive website design, e-commerce app development, scalable web applications, web design and development, e-commerce website development, cross-platform app development, backend development expert, frontend development services, app prototyping and development, UI/UX design for mobile apps, website optimization services, database design and integration"
@@ -24,20 +26,27 @@
       content="Showcasing my expertise as a full-stack web and mobile app developer. I build responsive, secure, and scalable apps for businesses using React, Node.js, Flutter, and modern JavaScript technologies."
     />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./favi.png" />
-    <!-- or, if you place it directly: <link rel="icon" type="image/png" href="/favicon.png" /> -->
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/favi.png" />
 
-    <style>
-      * {
-        font-family: Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: normal;
-        font-size: 20px;
-      }
-      body {
-        margin: 0;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply the saved theme before first paint to avoid a light/dark flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var dark = saved
+            ? saved === "dark"
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        } catch (e) {}
+      })();
+    </script>
 
     <title>Full-Stack Web & Mobile App Developer | Modern App Solutions</title>
   </head>

@@ -1,179 +1,33 @@
-/* ── Base styles ── */
-.services {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    padding: 3rem;
-    margin-top: 5rem;
-    margin-bottom: 8rem;
-    gap: 2rem;
-}
-
-.awesome {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 40%;
-    gap: 0.5rem;
-}
-
-.awesome > :nth-child(1) {
-    color: var(--black);
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.awesome > :nth-child(2) {
-    color: var(--orange);
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.awesome > :nth-child(3) {
-    color: var(--gray);
-    font-size: 16px;
-    margin-top: 1rem;
-    line-height: 1.6;
+.services-inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
 }
 
 .s-button {
-    width: 8rem;
-    height: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .cards {
-    flex: 1;
-    position: relative;
-    min-height: 25rem;
-    left: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
 }
 
-.cards > * {
-    position: absolute;
-    width: 10rem;
+/* Third card spans the row so the trio reads as a balanced block */
+.cards > :nth-child(3) {
+    grid-column: 1 / -1;
 }
 
-/* ── Large desktop (≥1280px) ── */
-@media (min-width: 1280px) {
-    .services {
-        padding: 3rem 4rem;
-    }
-
-    .awesome > :nth-child(1),
-    .awesome > :nth-child(2) {
-        font-size: 2.4rem;
+@media (max-width: 960px) {
+    .services-inner {
+        grid-template-columns: 1fr;
     }
 }
 
-/* ── Tablet landscape (≤1024px) ── */
-@media (max-width: 1024px) {
-    .services {
-        padding: 2.5rem;
-        margin-top: 4rem;
-        margin-bottom: 6rem;
-    }
-
-    .awesome {
-        width: 38%;
-    }
-
-    .awesome > :nth-child(1),
-    .awesome > :nth-child(2) {
-        font-size: 1.8rem;
-    }
-
-
+@media (max-width: 600px) {
     .cards {
-        min-height: 25rem;
-        left: 2.3rem;
-    }
-}
-
-/* ── Tablet portrait (≤768px) ── */
-@media (max-width: 768px) {
-    .services {
-        flex-direction: column;
-        padding: 2rem;
-        margin-top: 3rem;
-        margin-bottom: 5rem;
-        gap: 3rem;
-    }
-
-    .awesome {
-        width: 100%;
-    }
-
-    .awesome > :nth-child(1),
-    .awesome > :nth-child(2) {
-        font-size: 1.8rem;
-    }
-
-    .awesome > :nth-child(3) {
-        font-size: 15px;
-        max-width: 100%;
-    }
-
-    .cards {
-        width: 100%;
-        display: flex;
-        gap: 1.5rem;
-        min-height: unset;
-        left: -1.7rem;
-    }
-
-    .cards > * {
-        position: static;
-    }
-}
-
-/* ── Mobile (≤480px) ── */
-@media (max-width: 480px) {
-    .services {
-        padding: 1.5rem 1rem;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-        gap: 2.5rem;
-    }
-
-    .awesome > :nth-child(1),
-    .awesome > :nth-child(2) {
-        font-size: 1.6rem;
-    }
-
-    .awesome > :nth-child(3) {
-        font-size: 14px;
-    }
-
-    .s-button {
-        width: 7.5rem;
-        height: 2rem;
-        margin-top: 1.2rem;
-    }
-
-    .cards {
-        gap: 1.2rem;
-    }
-}
-
-/* ── Small mobile (≤360px) ── */
-@media (max-width: 360px) {
-    .services {
-        padding: 1rem 0.75rem;
-        margin-top: 1.5rem;
-        margin-bottom: 3rem;
-    }
-
-    .awesome > :nth-child(1),
-    .awesome > :nth-child(2) {
-        font-size: 1.4rem;
-    }
-
-    .awesome > :nth-child(3) {
-        font-size: 13px;
-    }
-
-    .s-button {
-        width: 7rem;
+        grid-template-columns: 1fr;
     }
 }

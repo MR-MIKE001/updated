@@ -1,37 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./skillcard.css";
 
 function SkillCard({ title, description, skills }) {
-  const [expanded, setExpanded] = useState(false);
+  // Drop case-insensitive duplicates (e.g. "Postman" and "postman")
+  const unique = skills.filter(
+    (skill, i) => skills.findIndex((s) => s.toLowerCase() === skill.toLowerCase()) === i
+  );
 
   return (
-    <div className='skill-card'>
-      <div className='skill-card-header'>
-        <h2 className='skill-card-title'>{title}</h2>
-        <button
-          className='skill-card-toggle'
-          onClick={() => setExpanded(prev => !prev)}
-          aria-expanded={expanded}
-          aria-label={expanded ? 'Collapse skills' : 'Expand skills'}
-        >
-          {expanded ? '−' : '+'}
-        </button>
-      </div>
-
+    <article className='skill-card'>
+      <h3 className='skill-card-title'>{title}</h3>
       <p className='skill-card-description'>{description}</p>
-
-      <ul className={`skill-card-list ${expanded ? 'expanded' : ''}`}>
-        {skills.map((skill, index) => (
-          <li key={index} className='skill-card-item'>
-            <span className='skill-dot' />
-            {skill}
-          </li>
+      <ul className='skill-card-list'>
+        {unique.map((skill) => (
+          <li key={skill} className='skill-card-item'>{skill}</li>
         ))}
-        <li className='skill-card-item '>
-          etc...
-        </li>
       </ul>
-    </div>
+    </article>
   );
 }
 

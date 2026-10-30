@@ -1,70 +1,53 @@
-.experience {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  padding: 3rem 1.5rem;
-  margin: 0 auto 6rem;
-  max-width: 960px;
-  min-height: 40vh;
-  border-radius: 1rem;
+.experience-wrap {
+  padding-bottom: var(--section-space);
 }
 
-/* Each achievement item */
+.experience {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: var(--radius-lg);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
 .achievement {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.35rem;
+  padding: clamp(1.75rem, 4vw, 2.75rem) 1rem;
   text-align: center;
 }
 
-/* Circle wrapper */
+.achievement + .achievement {
+  border-left: 1px solid var(--border);
+}
+
 .circle {
-  width: 4rem;
-  height: 4rem;
-  background: #c7bebeff;
-  color: var(--orange);
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  border: 2px solid var(--orange);
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-/* Gradient ring behind circle */
-.circle::before {
-  content: "";
-  position: absolute;
-  inset: -0.5rem;
-  border-radius: 50%;
-  background-image: linear-gradient(to bottom, #87e6fb 0%, #ffc05c 100%);
-  box-shadow: var(--boxShadow);
-  z-index: -1;
+.achievement span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
-.achievement span:nth-of-type(2) {
-  color: var(--orange);
-}
-
-/* Mobile layout */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .experience {
-    flex-direction: column;
-    gap: 2.5rem;
-    padding: 2.5rem 1rem;
-    margin-bottom: 4rem;
+    grid-template-columns: 1fr;
   }
 
-  .achievement {
-    width: 100%;
-  }
-
-  .achievement span:nth-of-type(1),
-  .achievement span:nth-of-type(2) {
-    font-size: 0.95rem;
+  .achievement + .achievement {
+    border-left: none;
+    border-top: 1px solid var(--border);
   }
 }

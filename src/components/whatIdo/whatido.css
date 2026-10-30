@@ -1,146 +1,37 @@
-/* ── Base styles ── */
-.whatido {
-    width: 100%;
-    margin-top: 5rem;
+.whatido-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.whatido-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 3rem;
-    box-sizing: border-box;
-    overflow: hidden;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: clamp(0.98rem, 1.4vw, 1.05rem);
 }
 
-.whatido-content {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-}
-
-.whatido-content h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1.2rem;
-    color: var(--orange);
-    line-height: 1.3;
-}
-
-.whatido-content p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--gray);
-}
-
+/* Shared card grid — also used by the Services page */
 .whatido-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-    width: 100%;
-    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
 }
 
-/* ── Large desktop (≥1280px) ── */
-@media (min-width: 1280px) {
-    .whatido {
-        padding: 2rem 4rem;
-    }
-
-    .whatido-content h2 {
-        font-size: 2.4rem;
-    }
-
-    .whatido-content p {
-        font-size: 1.1rem;
-    }
-
-    .whatido-cards {
-        gap: 2rem;
-    }
-}
-
-/* ── Tablet landscape (≤1024px) ── */
-@media (max-width: 1024px) {
-    .whatido {
-        padding: 2rem 2.5rem;
-        margin-top: 4rem;
-    }
-
-    .whatido-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .whatido-cards {
-        gap: 1.2rem;
-        margin-top: 2rem;
-    }
-}
-
-/* ── Tablet portrait (≤768px) ── */
-@media (max-width: 768px) {
-    .whatido {
-        padding: 1.5rem 2rem;
-        margin-top: 3rem;
-    }
-
+@media (max-width: 960px) {
     .whatido-content {
-        max-width: 100%;
-    }
-
-    .whatido-content h2 {
-        font-size: 1.6rem;
-        margin-bottom: 1rem;
-    }
-
-    .whatido-content p {
-        font-size: 0.95rem;
+        grid-template-columns: 1fr;
     }
 
     .whatido-cards {
-        gap: 1rem;
-        margin-top: 1.8rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* ── Mobile (≤480px) ── */
-@media (max-width: 480px) {
-    .whatido {
-        padding: 1rem;
-        margin-top: 2rem;
-    }
-
-    .whatido-content h2 {
-        font-size: 1.4rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .whatido-content p {
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-
+@media (max-width: 600px) {
     .whatido-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-}
-
-/* ── Small mobile (≤360px) ── */
-@media (max-width: 360px) {
-    .whatido {
-        padding: 0.75rem;
-        margin-top: 1.5rem;
-    }
-
-    .whatido-content h2 {
-        font-size: 1.2rem;
-    }
-
-    .whatido-content p {
-        font-size: 0.85rem;
+        grid-template-columns: 1fr;
     }
 }
