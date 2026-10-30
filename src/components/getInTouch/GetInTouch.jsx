@@ -1,28 +1,33 @@
 import "./getInTouch.css"
+import { Link } from "react-scroll";
 
 function GetInTouch() {
   return (
-    <section className="get-in-touch">
-      <h2 className="get-in-touch__title">Get in Touch</h2>
-      <p className="get-in-touch__text">
-        We&apos;d love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out to us.
-      </p>
-
-      <ul className="get-in-touch__list">
-        <li className="get-in-touch__item">
-          <span className="get-in-touch__label">Email:</span>
-          <a href="mailto:aimrmike5@gmail.com" className="get-in-touch__link">
-            aimrmike5@gmail.com
-          </a>
-        </li>
-        <li className="get-in-touch__item">
-          <span className="get-in-touch__label">Phone:</span>
-          <a href="tel:+2348109433307" className="get-in-touch__link">
-            +234 810 943 3307
-          </a>
-        </li>
-      </ul>
-    </section>
+    <aside className="get-in-touch">
+      <div>
+        <h2 className="get-in-touch__title">Not sure which package fits?</h2>
+        <p className="get-in-touch__text">
+          I&apos;d love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.
+        </p>
+        <ul className="get-in-touch__list">
+          <li className="get-in-touch__item">
+            <span className="get-in-touch__label">Email</span>
+            <a href="mailto:aimrmike5@gmail.com" className="get-in-touch__link">
+              aimrmike5@gmail.com
+            </a>
+          </li>
+          <li className="get-in-touch__item">
+            <span className="get-in-touch__label">Phone</span>
+            <a href="tel:+2348109433307" className="get-in-touch__link">
+              +234 810 943 3307
+            </a>
+          </li>
+        </ul>
+      </div>
+      <Link to="contact" smooth={true} offset={-60}>
+        <button className="button">Get in Touch</button>
+      </Link>
+    </aside>
   );
 }
 

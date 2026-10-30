@@ -1,193 +1,87 @@
-/* ── Base styles ── */
-.work {
-    display: flex;
-    flex-direction: row;
+.work-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
     align-items: center;
-    width: 100%;
-    padding: 0 3rem;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    gap: 2rem;
-    overflow: hidden;
-}
-
-#m-left {
-    flex: 1;
 }
 
 .m-right {
-    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+/* 3 tiles on the first row, 2 centred on the second */
+.m-brand {
+    grid-column: span 2;
+}
+
+.m-brand:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.m-brand {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    position: relative;
+    gap: 0.75rem;
+    padding: 1.25rem 0.75rem;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.m-maincircle {
-    position: relative;
-    width: 18rem;
-    height: 18rem;
-    border-radius: 100%;
-    box-shadow: var(--smboxShadow);
-    background: white;
+.m-brand:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
 }
 
-.m-maincircle > * {
-    position: absolute;
+.m-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
 }
 
-.m-maincircle > :nth-child(1) {
-    top: -3rem;
-    left: 6rem;
-}
-.m-maincircle > :nth-child(2) {
-    top: 5rem;
-    left: -3rem;
-}
-.m-maincircle > :nth-child(3) {
-    top: 5rem;
-    left: 6rem;
-}
-.m-maincircle > :nth-child(4) {
-    top: 5rem;
-    left: 15rem;
-}
-.m-maincircle > :nth-child(5) {
-    top: 13rem;
-    left: 6rem;
+.m-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
 }
 
-.m-mainsecircle {
-    width: 6rem;
-    height: 6rem;
-    position: absolute;
-    border-radius: 100%;
-    border: 5px solid #ebebeb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--smboxShadow);
-    background: white;
+.m-brand span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-muted);
 }
 
-.m-mainsecircle > img {
-    transform: scale(0.6);
-}
-
-.m-backcircle {
-    position: absolute;
-    height: 13rem;
-    width: 13rem;
-    border-radius: 100%;
-    z-index: -1;
-}
-
-.blueCircle {
-    background: #194988;
-    left: 16rem;
-    top: 0rem;
-}
-
-.yellowCircle {
-    background: #f5c32c;
-    left: 16rem;
-    top: 8rem;
-}
-
-/* ── Large desktop (≥1280px) ── */
-@media (min-width: 1280px) {
-    .work {
-        padding: 0 4rem;
-    }
-
-    .m-maincircle {
-        width: 20rem;
-        height: 20rem;
+@media (max-width: 960px) {
+    .work-inner {
+        grid-template-columns: 1fr;
     }
 }
 
-/* ── Tablet landscape (≤1024px) ── */
-@media (max-width: 1024px) {
-    .work {
-        padding: 0 2rem;
-        gap: 1.5rem;
-    }
-
-    .m-right {
-        transform: scale(0.9);
-        transform-origin: center;
-    }
-}
-
-/* ── Tablet portrait (≤768px) ── */
-@media (max-width: 768px) {
-    .work {
-        flex-direction: column;
-        padding: 0 1.5rem;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-        gap: 6rem;
-    }
-
-    #m-left {
-        width: 100%;
-    }
-
-    .m-right {
-        width: 100%;
-        transform: scale(0.85);
-        transform-origin: center top;
-    }
-
-    .blueCircle {
-        left: 14rem;
-    }
-
-    .yellowCircle {
-        left: 14rem;
-    }
-}
-
-/* ── Mobile (≤480px) ── */
 @media (max-width: 480px) {
-    .work {
-        padding: 0 1rem;
-        margin-top: 1.5rem;
-        margin-bottom: 3rem;
-        gap: 5rem;
-    }
-
     .m-right {
-        transform: scale(0.7);
-        transform-origin: center top;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
     }
 
-    .blueCircle {
-        left: 12rem;
+    .m-brand,
+    .m-brand:nth-child(4) {
+        grid-column: auto;
     }
 
-    .yellowCircle {
-        left: 12rem;
-    }
-}
-
-/* ── Small mobile (≤360px) ── */
-@media (max-width: 360px) {
-    .work {
-        padding: 0 0.75rem;
-        gap: 4rem;
-    }
-
-    .m-right {
-        transform: scale(0.6);
-        transform-origin: center top;
-    }
-
-    .blueCircle {
-        left: 10rem;
-    }
-
-    .yellowCircle {
-        left: 10rem;
+    .m-brand:last-child {
+        grid-column: 1 / -1;
     }
 }
