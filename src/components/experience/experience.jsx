@@ -2,9 +2,9 @@ import React from 'react'
 import './experience.css'
 
 const stats = [
-  { value: "6+", label: "Years of experience" },
-  { value: "20+", label: "Completed projects" },
-  { value: "5+", label: "Companies worked with" },
+  { value: "7+", label: "Years of experience" },
+  { value: "47+", label: "Completed projects" },
+  { value: "12+", label: "Companies worked with" },
 ]
 
 function Experience() {

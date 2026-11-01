@@ -18,7 +18,7 @@ function AboutPage() {
         />
         <meta
           name="keywords"
-          content="web developer, senior software engineer, backend engineer, frontend engineer,senior software engineer in Nigeria, experienced full‑stack JavaScript developer, React, Node.js and .NET developer, mobile app developer (Flutter / React Native), backend and frontend engineer, web developer with 8+ years experience , Nigerian software engineer portfolio"
+          content="web developer, senior software engineer, backend engineer, frontend engineer,senior software engineer in Nigeria, experienced full‑stack JavaScript developer, React, Node.js and .NET developer, mobile app developer (Flutter / React Native), backend and frontend engineer, web developer with 7+ years experience , Nigerian software engineer portfolio"
         />
 
         {/* ✅ Open Graph */}

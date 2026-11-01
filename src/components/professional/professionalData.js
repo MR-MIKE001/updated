@@ -1,4 +1,10 @@
 const professionalData = [
+    {
+        company:"Afterquery",
+        title:"Senior Software Engineer",
+        period:"2026 – Present · Remote",
+        description:"At Afterquery, I review and evaluate engineering tasks and code submissions across multiple tech stacks, including JavaScript and TypeScript, having assessed 50+ submissions with an average turnaround of 24–48 hours. I provide clear, actionable feedback that improves evaluation quality and helps maintain high-quality benchmarks for AI and engineering evaluation systems. I work asynchronously with distributed teams to meet tight delivery deadlines.",
+    },
      {
         company:"Africa International Housing Show",
         title:"Senior-Software Engineer",
@@ -7,12 +13,20 @@ const professionalData = [
     {  
         company:"Vega It",
         title:"Mid-Software Engineer"   ,
+        period:"2024 – 2026 · Remote",
         description:"At Vega IT, I worked on developing and maintaining modern web applications using React and TypeScript, focusing on building reusable component systems and scalable frontend architectures.I collaborated closely with cross-functional teams in an Agile environment, contributing to feature development, performance optimization, and code reviews. My role involved integrating APIs, managing application state, and ensuring that applications were both efficient and maintainable.",
-        
+
      },
+    {
+        company:"SWAD Digital Solutions Ltd",
+        title:"Senior Software Engineer / Team Lead",
+        period:"2022 – 2024",
+        description:"At SWAD Digital Solutions, I designed, built, and shipped responsive client web applications and backend APIs using React, TypeScript, Node.js, and Express. I led a small engineering team, managing 3–5 concurrent client projects across time zones and consistently delivering on or ahead of deadlines. I also maintained live systems, debugging and resolving production issues to keep applications reliable.",
+    },
         {
         company:"Freelance (Upwork & Fiverr)",
         title:"Freelance Software Engineer",
+        period:"2019 – 2022 · Remote",
         description:"As a freelance developer, I’ve worked with clients across different industries, delivering custom web solutions tailored to business needs.I’ve built full-stack applications, designed APIs, and developed responsive interfaces, ensuring each project meets high standards of performance, security, and usability. This experience has strengthened my ability to communicate effectively, manage projects independently, and deliver results consistently.",
         },
         {

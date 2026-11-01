@@ -4,6 +4,7 @@ import agentity from "../../img/agentitypage.webp";
 import chat from '../../img/chatlogo.webp'
 import airbnb from "../../img/aii.webp";
 import nike from '../../img/Nikebg.webp'
+import taskpad from '../../img/taskpad.webp'
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { UilExternalLinkAlt } from "@iconscout/react-unicons";
@@ -12,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const projects = [
+  { title: "Taskpad", image: taskpad, url: "", tags: ["React", "TypeScript", "Vite", "Tailwind CSS"], description: "A private task manager and job-search tracker that runs entirely in the browser, with natural-language quick add, recurring tasks, an application pipeline with follow-up reminders, undo/redo, cross-tab sync and JSON/CSV backup." },
   { title: "Real-time Chat App", image: chat, url: "https://chatapp-54bu.onrender.com/", tags: ["Socket.IO", "Node.js", "React"], description: "A real-time chat application built with Socket.IO, allowing users to create and join chat rooms for seamless communication." },
   { title: "Airbnb Clone", image: airbnb, url: "https://airbnb-clone-fzfi.onrender.com", tags: ["React", "Node.js", "Auth"], description: "An Airbnb clone built with React and Node.js, featuring user authentication, property listings, and booking functionality for a seamless vacation rental experience." },
   { title: "Nike Store Clone", image: nike, url: "https://nike-mr-mike-2i2j.onrender.com/", tags: ["React", "Node.js", "E-commerce"], description: "A Nike clone built with React and Node.js, featuring user authentication, product listings, and shopping functionality for a seamless e-commerce experience." },

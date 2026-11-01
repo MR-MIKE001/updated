@@ -13,7 +13,7 @@ function Professional() {
         <ol className="ecards">
           {professionalData.map((experience, index) => (
             <li key={index}>
-              <ExperienceCard company={experience.company} title={experience.title} description={experience.description} />
+              <ExperienceCard company={experience.company} title={experience.title} period={experience.period} description={experience.description} />
             </li>
           ))}
         </ol>
