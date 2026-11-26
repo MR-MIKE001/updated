@@ -5,6 +5,11 @@ const professionalData = [
         period:"2026 – Present · Remote",
         description:"At Afterquery, I review and evaluate engineering tasks and code submissions across multiple tech stacks, including JavaScript and TypeScript, having assessed 50+ submissions with an average turnaround of 24–48 hours. I provide clear, actionable feedback that improves evaluation quality and helps maintain high-quality benchmarks for AI and engineering evaluation systems. I work asynchronously with distributed teams to meet tight delivery deadlines.",
     },
+    {
+        company:"MindGrid Academy",
+        title:"Cohort Tutor, Backend Engineering & Software Development Fundamentals",
+        description:"At MindGrid Academy, I take full ownership of my tutoring modules, from planning the scheme of work to recording content, running live sessions, and reviewing learner projects. I teach Node.js runtime and production-grade API design, guiding students through a fully documented CRUD API with Swagger, Zod validation, and structured error handling. For the Software Development Fundamentals course, I lead weeks 1 to 5, recording tutor videos, running Saturday live classes, and setting and reviewing projects. I am also planning further modules on authentication and API security, and on relational modeling and PostgreSQL query performance. My focus is turning complex backend concepts into clear, practical steps that students can apply in real systems.",
+    },
      {
         company:"Africa International Housing Show",
         title:"Senior-Software Engineer",

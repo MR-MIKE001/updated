@@ -5,6 +5,7 @@ import fiver from '../../img/fiverr.webp'
 import shopify from '../../img/fin.webp'
 import amazon from '../../img/vegalogo.webp'
 import facebook from '../../img/ahis_logo.webp'
+import tonote from '../../img/tonote.webp'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 
@@ -12,6 +13,7 @@ const brands = [
   { logo: amazon, name: 'Vega IT' },
   { logo: facebook, name: 'Africa International Housing Show' },
   { logo: shopify, name: 'Finclusion' },
+  { logo: tonote, name: 'ToNote' },
   { logo: upwork, name: 'Upwork' },
   { logo: fiver, name: 'Fiverr' },
 ]

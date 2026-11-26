@@ -7,17 +7,8 @@
 
 .m-right {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-}
-
-/* 3 tiles on the first row, 2 centred on the second */
-.m-brand {
-    grid-column: span 2;
-}
-
-.m-brand:nth-child(4) {
-    grid-column: 2 / span 2;
 }
 
 .m-brand {
@@ -74,14 +65,5 @@
     .m-right {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
-    }
-
-    .m-brand,
-    .m-brand:nth-child(4) {
-        grid-column: auto;
-    }
-
-    .m-brand:last-child {
-        grid-column: 1 / -1;
     }
 }
